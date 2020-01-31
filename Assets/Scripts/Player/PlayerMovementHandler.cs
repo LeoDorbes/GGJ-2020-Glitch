@@ -7,6 +7,8 @@ namespace Player
     {
         [SerializeField] private float _speed = 10;
         
+        public PlayerEntity Player { get; set; }
+        
         private Rigidbody2D _rigidbody;
 
         private void Awake()
@@ -14,7 +16,7 @@ namespace Player
             _rigidbody = GetComponent<Rigidbody2D>();
         }
 
-        private void MoveInDirection(Vector2 direction, float intensity)
+        public void MoveInDirection(Vector2 direction, float intensity)
         {
             _rigidbody.velocity = direction * intensity * _speed;
         }
