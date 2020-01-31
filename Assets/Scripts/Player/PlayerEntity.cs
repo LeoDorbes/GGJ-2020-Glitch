@@ -1,11 +1,10 @@
-using System;
 using UnityEngine;
 
-namespace Scenes.Scripts.Player
+namespace Player
 {
     public class PlayerEntity : MonoBehaviour
     {
-        private void Start()
+        private void Awake()
         {
             PlayerManager.I.Player = this;
         }

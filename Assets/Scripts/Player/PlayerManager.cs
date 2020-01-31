@@ -1,7 +1,6 @@
-﻿using UnityEngine;
-using Utils;
+﻿using Utils;
 
-namespace Scenes.Scripts.Player
+namespace Player
 {
     public class PlayerManager : Singleton<PlayerManager>
     {
