@@ -9,6 +9,7 @@ namespace Player
 {
     public class PlayerEntity : MonoBehaviour
     {
+        [SerializeField] private float _interactionRange;
         [SerializeField] private LayerMask _interactionLayerMask;
         [SerializeField] private AnimatorController _animator;
 
@@ -96,7 +97,7 @@ namespace Player
             var hit = Physics2D.Raycast(
                 new Vector2(transform.position.x, transform.position.y + 0.5f) + originFromPlayer,
                 originFromPlayer.normalized,
-                10,
+                _interactionRange,
                 _interactionLayerMask
             );
 
