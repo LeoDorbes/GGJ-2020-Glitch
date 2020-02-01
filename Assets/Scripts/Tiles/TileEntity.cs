@@ -40,7 +40,10 @@ namespace Tiles
         {
             if (Glitched != glitched && glitched)
             {
-                Sound.PlaySoundOneShot("event:/SD/Footsteps/Footsteps_character", transform);
+                if (Random.Range(1, 100) > 10)
+                {
+                    Sound.PlaySoundOneShot("event:/SD/Footsteps/Footsteps_character", transform);
+                }
             }
             
             Glitched = glitched;

@@ -1,6 +1,8 @@
 using System;
+using DG.Tweening;
 using Interactibles;
 using Tiles;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace Player
@@ -8,6 +10,7 @@ namespace Player
     public class PlayerEntity : MonoBehaviour
     {
         [SerializeField] private LayerMask _interactionLayerMask;
+        [SerializeField] private AnimatorController _animator;
 
         private PlayerMovementHandler _movementHandler;
         private TileSwitcherHandler _tileSwitcherHandler;
@@ -22,6 +25,8 @@ namespace Player
             _movementHandler = GetComponent<PlayerMovementHandler>();
             _movementHandler.Player = this;
             _tileSwitcherHandler = GetComponent<TileSwitcherHandler>();
+            transform.DOScale(Vector3.one, 1.5f);
+            transform.DORotate(Vector3.zero, 1.5f);
         }
 
         private void Update()
