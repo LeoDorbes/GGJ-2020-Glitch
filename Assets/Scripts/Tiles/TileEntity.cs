@@ -43,6 +43,11 @@ namespace Tiles
 
         public void SetGlitchedState(bool glitched)
         {
+            if (Glitched != glitched && glitched)
+            {
+                Sound.PlaySoundOneShot("event:/SD/Footsteps/Footsteps_character", transform);
+            }
+            
             Glitched = glitched;
             _graphicsHandler.DisplayGlitchedState(glitched);
         }

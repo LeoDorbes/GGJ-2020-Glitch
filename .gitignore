@@ -22,3 +22,5 @@ Assets/Scenes/Tests/
 /Assets/FMODStudioCache.asset.meta
 fmod.log
 fmod_editor.log
+
+Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
