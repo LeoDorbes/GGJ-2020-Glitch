@@ -111,6 +111,8 @@ MonoBehaviour:
   glitchRatio: 0
   glitchTimer: 0
   isInRandomZone: 0
+  isBugged: 0
+  bugTilePool: {fileID: 11400000, guid: 62fc359468c08f047bbeaa1c5ef401cf, type: 2}
 --- !u!114 &6654941877720567272
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -39,8 +39,45 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 798
+  Exists: 0
+--- !u!114 &-4330350720365193545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Generative/bugLevel
+  m_EditorClassIdentifier: 
+  Name: bugLevel
+  Min: 0
+  Max: 100
+  Default: 0
   Exists: 1
 --- !u!114 &-4174429223899791912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/Global Game Jam/glitch/FMOD Assets/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637161660797092099
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 14273472
+  Exists: 1
+--- !u!114 &-3668589730651355751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +133,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 14273472
-  Exists: 1
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,16 +147,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6781546868067598064}
-  - {fileID: -580977481804365751}
+  - {fileID: 8614945140547848804}
+  - {fileID: -3668589730651355751}
   EditorEvents:
   - {fileID: 8995203912669826367}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -580977481804365751}
+  - {fileID: -3668589730651355751}
   StringsBanks:
-  - {fileID: -6781546868067598064}
-  stringsBankWriteTime: 637161665113498585
+  - {fileID: 8614945140547848804}
+  stringsBankWriteTime: 637161660797102064
   cacheVersion: 3
 --- !u!114 &24443062177648496
 MonoBehaviour:
@@ -177,7 +214,7 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3730811468155042665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,6 +272,26 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 1
+--- !u!114 &8614945140547848804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/Global Game Jam/glitch/FMOD Assets/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637161660797102064
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 798
+  Exists: 1
 --- !u!114 &8995203912669826367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,12 +307,12 @@ MonoBehaviour:
   Path: event:/Music/Music_Generative
   guid: 04958671d7be6847922550a093ebf93a
   Banks:
-  - {fileID: -580977481804365751}
+  - {fileID: -3668589730651355751}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1827316061957296053}
+  - {fileID: -4330350720365193545}
   MinDistance: 0
   MaxDistance: 0
   Length: 53367
