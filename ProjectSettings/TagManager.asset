@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - SubTile
+  - SwitchableTile
   - TileSwitcher
-  - Tile
+  - 
   - 
   - 
   - 
