@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5149302426829208293}
   - component: {fileID: 4387932814795979017}
   - component: {fileID: 6654941877720567272}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: SubTileEntity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,8 +135,6 @@ MonoBehaviour:
   glitchRatio: 0
   glitchTimer: 0
   isInRandomZone: 0
-  isBugged: 0
-  bugTilePool: {fileID: 11400000, guid: 62fc359468c08f047bbeaa1c5ef401cf, type: 2}
 --- !u!114 &6654941877720567272
 MonoBehaviour:
   m_ObjectHideFlags: 0
