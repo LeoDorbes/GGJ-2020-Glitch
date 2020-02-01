@@ -13,6 +13,7 @@ namespace Interactibles
             get => _glitched;
             private set => _glitched = value;
         }
+        public bool AlreadyInteracted { get; set; } = false;
 
         private InteractibleGraphicsHandler _graphicsHandler { get; set; }
 
