@@ -1,12 +1,13 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Tiles
 {
     public class TileGraphicsHandler : MonoBehaviour
     {
         [SerializeField] private Sprite _normalSprite;
-        [SerializeField] private Sprite _glitchedSprite;
+        [FormerlySerializedAs("_glitchedSprite")] [SerializeField] private Sprite _neonSprite;
 
         private SpriteRenderer _spriteRenderer;
         private TileEntity _tileEntity;
@@ -19,7 +20,7 @@ namespace Tiles
 
         public void DisplayGlitchedState(bool glitched)
         {
-            _spriteRenderer.sprite = glitched ? _glitchedSprite : _normalSprite;
+            _spriteRenderer.sprite = glitched ? _neonSprite : _normalSprite;
         }
         
         public void StartAmbiantGlitch()
