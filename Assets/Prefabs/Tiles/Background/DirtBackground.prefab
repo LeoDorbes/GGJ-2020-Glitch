@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3328893283673222531
+--- !u!1001 &3544559161271240696
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,29 +11,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c9fdec694ce529e439245357ce2686c4,
+      objectReference: {fileID: 21300000, guid: bac62aacce518cd4b8cb3ea8404f847c,
         type: 3}
-    - target: {fileID: 958147089791381973, guid: 5aedc99124b9e294b905de19ac6b4cd1,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 958147089791381973, guid: 5aedc99124b9e294b905de19ac6b4cd1,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4387932814795979017, guid: 5aedc99124b9e294b905de19ac6b4cd1,
-        type: 3}
-      propertyPath: bugTilePool
-      value: 
-      objectReference: {fileID: 11400000, guid: 62fc359468c08f047bbeaa1c5ef401cf,
-        type: 2}
-    - target: {fileID: 4387932814795979017, guid: 5aedc99124b9e294b905de19ac6b4cd1,
-        type: 3}
-      propertyPath: isBugged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5149302426829208293, guid: 5aedc99124b9e294b905de19ac6b4cd1,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -44,32 +23,22 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5149302426829208293, guid: 5aedc99124b9e294b905de19ac6b4cd1,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 5149302426829208293, guid: 5aedc99124b9e294b905de19ac6b4cd1,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6654941877720567272, guid: 5aedc99124b9e294b905de19ac6b4cd1,
-        type: 3}
-      propertyPath: _normalSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c9fdec694ce529e439245357ce2686c4,
-        type: 3}
     - target: {fileID: 6654941877720567272, guid: 5aedc99124b9e294b905de19ac6b4cd1,
         type: 3}
       propertyPath: _neonSprite
       value: 
       objectReference: {fileID: 21300000, guid: 9f82f47d0e6521f438ab7cbf32586cf3,
         type: 3}
+    - target: {fileID: 6654941877720567272, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: _normalSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bac62aacce518cd4b8cb3ea8404f847c,
+        type: 3}
     - target: {fileID: 7318174131548648412, guid: 5aedc99124b9e294b905de19ac6b4cd1,
         type: 3}
       propertyPath: m_Name
-      value: GrassBackground
+      value: DirtBackground
       objectReference: {fileID: 0}
     - target: {fileID: 8726070337340815733, guid: 5aedc99124b9e294b905de19ac6b4cd1,
         type: 3}
