@@ -27,7 +27,7 @@ namespace Player
         private void Update()
         {
             if (!HasControl) return;
-            
+
             // Movement
             var direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
@@ -44,12 +44,11 @@ namespace Player
 
                 if (!interactibleEntity) return;
                 interactibleEntity.ChangeGlitchState();
-            }
-            
-            // Test bug
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                TileManager.I.addBugs(0.05f);
+                if (!interactibleEntity.AlreadyInteracted)
+                {
+                    TileManager.I.addBugs(0.01f);
+                    interactibleEntity.AlreadyInteracted = true;
+                }
             }
         }
 
