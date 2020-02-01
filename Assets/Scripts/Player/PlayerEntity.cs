@@ -38,7 +38,7 @@ namespace Player
                 var tileEntity = GetTileToInteractWith();
 
                 if (!tileEntity) return;
-                tileEntity.SetGlitchedState(!tileEntity.Glitched);
+                TileManager.I.InvertGlitchedStateAtPosition(tileEntity.Position);
             }
         }
 
