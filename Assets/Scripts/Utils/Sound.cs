@@ -5,15 +5,14 @@ namespace Utils
 {
     public class Sound
     {
-        public static void PlaySoundOneShot(string soundName, Transform location = null)
+        public static void PlaySoundOneShot(string soundPath, Transform location = null)
         {
-            var eventName = "event:" + soundName;
             if (location == null)
             {
-                FMODUnity.RuntimeManager.PlayOneShot(eventName, location.position);
+                FMODUnity.RuntimeManager.PlayOneShot(soundPath, location.position);
                 return;
             }
-            FMODUnity.RuntimeManager.PlayOneShot(eventName, location.position);
+            FMODUnity.RuntimeManager.PlayOneShot(soundPath, location.position);
         }
 
         /// <summary>
@@ -24,10 +23,9 @@ namespace Utils
         /// <param name="soundName"></param>
         /// <param name="location"></param>
         /// <returns></returns>
-        public static EventInstance CreateSoundInstance(string soundName, Transform location = null)
+        public static EventInstance CreateSoundInstance(string soundPath, Transform location = null)
         {
-            var eventName = "event:" + soundName;
-            return FMODUnity.RuntimeManager.CreateInstance(eventName);
+            return FMODUnity.RuntimeManager.CreateInstance(soundPath);
         }
     }
 }

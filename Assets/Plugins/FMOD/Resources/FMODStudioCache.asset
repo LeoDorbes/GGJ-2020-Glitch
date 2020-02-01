@@ -33,15 +33,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -7144597627608150579}
-  - {fileID: 24443062177648496}
-  EditorEvents: []
+  - {fileID: 1102396418203158074}
+  - {fileID: 3730811468155042665}
+  EditorEvents:
+  - {fileID: 8995203912669826367}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 24443062177648496}
+  - {fileID: 3730811468155042665}
   StringsBanks:
-  - {fileID: -7144597627608150579}
-  stringsBankWriteTime: 637161502624924371
+  - {fileID: 1102396418203158074}
+  stringsBankWriteTime: 637161657275763017
   cacheVersion: 3
 --- !u!114 &24443062177648496
 MonoBehaviour:
@@ -63,3 +64,84 @@ MonoBehaviour:
   - Name: 
     Value: 1000
   Exists: 1
+--- !u!114 &1102396418203158074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/Shadow/Documents/Projects/glitch/FMOD Assets/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637161657275763017
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 798
+  Exists: 1
+--- !u!114 &3730811468155042665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/Shadow/Documents/Projects/glitch/FMOD Assets/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637161657277997996
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 14273472
+  Exists: 1
+--- !u!114 &8188418150512231739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Generative/bugLevel
+  m_EditorClassIdentifier: 
+  Name: bugLevel
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &8995203912669826367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Generative
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Generative
+  guid: 04958671d7be6847922550a093ebf93a
+  Banks:
+  - {fileID: 3730811468155042665}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8188418150512231739}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 53367
