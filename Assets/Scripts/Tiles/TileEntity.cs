@@ -6,8 +6,25 @@ namespace Tiles
     {
         public bool Glitched { get; private set; }
 
+        public bool glitchProcessIsOccuring = false;
+
+        public float glitchRatio = 0f;
+
+        public float glitchTimer = 0f;
+        
+        public bool isInRandomZone = false;
+        
+        public static float randomZone = 0.6f;
+        
+        public static float randomChance = 0.1f;
+        
         private TileGraphicsHandler _graphicsHandler;
 
+        public void UpdateRatio()
+        {
+            
+        }
+        
         private void Awake()
         {
             TileManager.I.Tiles.Add(this);
@@ -19,5 +36,12 @@ namespace Tiles
             Glitched = glitched;
             _graphicsHandler.DisplayGlitchedState(glitched);
         }
+
+        public void SwitchCollided()
+        {
+            _graphicsHandler.StartAmbiantGlitch();
+        }
+        
+
     }
 }
