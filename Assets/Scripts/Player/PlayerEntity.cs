@@ -7,6 +7,7 @@ namespace Player
 {
     public class PlayerEntity : MonoBehaviour
     {
+        [SerializeField] private float _interactionRange;
         [SerializeField] private LayerMask _interactionLayerMask;
 
         private PlayerMovementHandler _movementHandler;
@@ -27,7 +28,7 @@ namespace Player
         private void Update()
         {
             if (!HasControl) return;
-            
+
             // Movement
             var direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
@@ -45,7 +46,7 @@ namespace Player
                 if (!interactibleEntity) return;
                 interactibleEntity.ChangeGlitchState();
             }
-            
+
             // Test bug
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -92,7 +93,7 @@ namespace Player
             var hit = Physics2D.Raycast(
                 new Vector2(transform.position.x, transform.position.y + 0.5f) + originFromPlayer,
                 originFromPlayer.normalized,
-                10,
+                _interactionRange,
                 _interactionLayerMask
             );
 
