@@ -122291,17 +122291,17 @@ PrefabInstance:
     - target: {fileID: 9222014037779318728, guid: adb7922eb31efd248887f88c24eadf7e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9222014037779318728, guid: adb7922eb31efd248887f88c24eadf7e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9222014037779318728, guid: adb7922eb31efd248887f88c24eadf7e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adb7922eb31efd248887f88c24eadf7e, type: 3}
@@ -122394,12 +122394,12 @@ PrefabInstance:
     - target: {fileID: 803314681687341123, guid: 5df3ba20208c1dd4e979c4a8c4b1fa8d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.01
+      value: 5.82
       objectReference: {fileID: 0}
     - target: {fileID: 803314681687341123, guid: 5df3ba20208c1dd4e979c4a8c4b1fa8d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -6.78
       objectReference: {fileID: 0}
     - target: {fileID: 803314681687341123, guid: 5df3ba20208c1dd4e979c4a8c4b1fa8d,
         type: 3}
@@ -122451,6 +122451,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trigger End Game
       objectReference: {fileID: 0}
+    - target: {fileID: 803314681687341135, guid: 5df3ba20208c1dd4e979c4a8c4b1fa8d,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5df3ba20208c1dd4e979c4a8c4b1fa8d, type: 3}
 --- !u!1001 &3145322053774894894

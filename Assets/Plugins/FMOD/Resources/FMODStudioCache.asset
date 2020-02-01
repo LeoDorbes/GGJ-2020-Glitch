@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9119458609788942563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Generative/bugLevel
+  m_EditorClassIdentifier: 
+  Name: bugLevel
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &-7965283345808053642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,6 +54,29 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 0
+--- !u!114 &-4270229443021123527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/SOUND_GET_UNGLITCHED
+  m_EditorClassIdentifier: 
+  Path: event:/SD/SOUND_GET_UNGLITCHED
+  guid: 59b6dc98de8727438c77916671d4cffc
+  Banks:
+  - {fileID: 3595083105941648037}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4500
 --- !u!114 &-3537744737919429009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,10 +120,33 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -572293368235565085}
+  - {fileID: -9119458609788942563}
   MinDistance: 0
   MaxDistance: 0
   Length: 53367
+--- !u!114 &-1333140131563843725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/SOUND_GET_GLITCHED
+  m_EditorClassIdentifier: 
+  Path: event:/SD/SOUND_GET_GLITCHED
+  guid: a85dac17c34ee245b28a217d42e220a1
+  Banks:
+  - {fileID: 3595083105941648037}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3614
 --- !u!114 &-1256240205215456662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,11 +161,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:/Users/Shadow/Documents/Projects/glitch/FMOD Assets/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637161804397908012
+  lastModified: 637161887847358392
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 922
+    Value: 1272
   Exists: 1
 --- !u!114 &-840651215300796975
 MonoBehaviour:
@@ -163,12 +226,16 @@ MonoBehaviour:
   - {fileID: -2322925227994229926}
   - {fileID: -840651215300796975}
   - {fileID: -3537744737919429009}
+  - {fileID: -4270229443021123527}
+  - {fileID: -1333140131563843725}
+  - {fileID: 4083008058579175241}
+  - {fileID: 5453588031147184594}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3595083105941648037}
   StringsBanks:
   - {fileID: -1256240205215456662}
-  stringsBankWriteTime: 637161804397908012
+  stringsBankWriteTime: 637161887847358392
   cacheVersion: 3
 --- !u!114 &3595083105941648037
 MonoBehaviour:
@@ -184,12 +251,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:/Users/Shadow/Documents/Projects/glitch/FMOD Assets/Desktop/Master.bank
   SubDir: 
-  lastModified: 637161804370548014
+  lastModified: 637161887817408013
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 15453408
+    Value: 17040448
   Exists: 1
+--- !u!114 &4083008058579175241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/SOUND_GLITCH_IN
+  m_EditorClassIdentifier: 
+  Path: event:/SD/SOUND_GLITCH_IN
+  guid: c61717009d8f8d4ebf4e2a1a79adffb5
+  Banks:
+  - {fileID: 3595083105941648037}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16000
 --- !u!114 &4383724153847399905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +300,26 @@ MonoBehaviour:
   - Name: 
     Value: 15453216
   Exists: 0
+--- !u!114 &5453588031147184594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/SOUND_LASER
+  m_EditorClassIdentifier: 
+  Path: event:/SD/SOUND_LASER
+  guid: cc8e701556970e49a9cda58a62cc5785
+  Banks:
+  - {fileID: 3595083105941648037}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
