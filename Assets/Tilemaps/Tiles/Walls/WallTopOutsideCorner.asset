@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: WallTopOutsideCorner
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 1857233352050555588, guid: 731f6c07218e38042a836c8e44466d88,
+  m_DefaultSprite: {fileID: 3649790641835249256, guid: 731f6c07218e38042a836c8e44466d88,
     type: 3}
   m_DefaultGameObject: {fileID: 323537426618161046, guid: 05f883ba580777d4fb28158373c58eb6,
     type: 3}

@@ -2360,8 +2360,8 @@ TextureImporter:
       name: NormalWallsTileset_3
       rect:
         serializedVersion: 2
-        x: 5
-        y: 5
+        x: 212
+        y: 74
         width: 64
         height: 64
       alignment: 7
@@ -2381,7 +2381,7 @@ TextureImporter:
       name: NormalWallsTileset_4
       rect:
         serializedVersion: 2
-        x: 74
+        x: 5
         y: 5
         width: 64
         height: 64
@@ -2402,7 +2402,7 @@ TextureImporter:
       name: NormalWallsTileset_5
       rect:
         serializedVersion: 2
-        x: 143
+        x: 74
         y: 5
         width: 64
         height: 64
@@ -2415,6 +2415,48 @@ TextureImporter:
       bones: []
       spriteID: 4b55b0a5a4648e0f0800000000000000
       internalID: -1087542024857758284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NormalWallsTileset_6
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 5
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f08a2e33db8691b50800000000000000
+      internalID: 6564393093697808399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NormalWallsTileset_7
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 5
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee231b90806fe280800000000000000
+      internalID: -9011878223871267104
       vertices: []
       indices: 
       edges: []
