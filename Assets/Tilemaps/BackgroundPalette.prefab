@@ -59,13 +59,22 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 1
       m_AllTileFlags: 1073741826
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 0
+      m_AllTileFlags: 1073741826
   m_AnimatedTiles:
   - first: {x: 0, y: -1, z: 0}
     second:
       m_AnimatedSprites:
       - {fileID: 21300000, guid: 4938eab415355ab40a90c04b0371196d, type: 3}
       - {fileID: 21300000, guid: f1a51226f4c786a43b1e90c54827df38, type: 3}
-      m_AnimationSpeed: 6.965481
+      m_AnimationSpeed: 3.8178134
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -73,17 +82,17 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: ccccbc5f988658c4b8e658c71e853bc4, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 015e04dee9d57254a9b774ad7eaac6ae, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 5a2c3cec58409be4cb9abd74964f1439, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 6fc10f8294dcb334abd930d064f24757, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 4938eab415355ab40a90c04b0371196d, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: f1a51226f4c786a43b1e90c54827df38, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data:
       e00: 1
       e01: 0
@@ -102,11 +111,12 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray:
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 5457793564541869663, guid: 0af15e6c148478a458b00e03bfe5a7a3,
+      type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 7318174131548648412, guid: 5aedc99124b9e294b905de19ac6b4cd1,
       type: 3}
@@ -191,7 +201,7 @@ GameObject:
   - component: {fileID: 2240304249052067648}
   - component: {fileID: 5090000877153510363}
   m_Layer: 31
-  m_Name: Tilemap1
+  m_Name: BackgroundPalette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
