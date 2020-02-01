@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: GrassTile
+  m_Name: GrassInterest
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: c9fdec694ce529e439245357ce2686c4, type: 3}
-  m_DefaultGameObject: {fileID: 5457793564541869663, guid: 0af15e6c148478a458b00e03bfe5a7a3,
+  m_DefaultSprite: {fileID: 21300000, guid: f9220bae8ba39c244808be607fe0791b, type: 3}
+  m_DefaultGameObject: {fileID: 4844781585570443255, guid: e9587609ad23f5041a21b3cc513c8506,
     type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []
