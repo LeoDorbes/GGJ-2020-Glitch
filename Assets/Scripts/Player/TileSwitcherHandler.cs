@@ -1,12 +1,15 @@
+using FMOD.Studio;
 using Interactibles;
 using Tiles;
 using UnityEngine;
+using Utils;
 
 namespace Player
 {
     public class TileSwitcherHandler : MonoBehaviour
     {
         private CircleCollider2D _collider;
+        private EventInstance _entitySound;
 
         private float rangeMultiplier = 1;
 
@@ -37,6 +40,7 @@ namespace Player
             if (!interactibleEntity) return;
 
             interactibleEntity.ChangeNeonState(true);
+            _entitySound = Sound.CreateSoundInstance("event:/SD/SOUND_GLITCH_IN");
         }
 
         private void OnTriggerExit2D(Collider2D other)
@@ -52,6 +56,7 @@ namespace Player
             if (interactibleEntity)
             {
                 interactibleEntity.ChangeNeonState(false);
+                _entitySound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
     }
