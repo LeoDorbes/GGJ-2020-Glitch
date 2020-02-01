@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using Utils;
 
 namespace Ui
 {
@@ -8,9 +9,11 @@ namespace Ui
     {
         public Image BlackForeground;
 
-        private void Start()
+        private void Awake()
         {
             GameManager.I.GameUi = this;
+            StartCoroutine(Animations.FadeOutCoroutine(1f, BlackForeground));
+
         }
     }
 }

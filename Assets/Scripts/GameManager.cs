@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using FMOD.Studio;
+using Player;
 using Ui;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils;
@@ -12,14 +14,17 @@ public class GameManager : Singleton<GameManager>
     private EventInstance _ambianceManager;
 
     public GameUi GameUi { get; set; }
-    void Start()
+    private void Start()
     {
+        if (I != this)
+        {
+            Destroy(gameObject);
+        }
         _musicManager = Sound.CreateSoundInstance("event:/Music/Music_Generative");
         _ambianceManager = Sound.CreateSoundInstance("event:/SD/Amb/Amb");
 
         _ambianceManager.start();
         _musicManager.start();
-        StartCoroutine(Animations.FadeOutCoroutine(2f, GameUi.BlackForeground));
     }
 
     public void LoadNextLevel()
@@ -29,11 +34,11 @@ public class GameManager : Singleton<GameManager>
 
     private IEnumerator LoadNextLevelCoroutine()
     {
-        Debug.Log("NEXT LEVELLLLLL");
+        PlayerManager.I.Player.HasControl = false;
         var scene = int.Parse(SceneManager.GetActiveScene().name);
 
-        StartCoroutine(Animations.FadeInCoroutine(3f, GameUi.BlackForeground));
-        yield return new WaitForSeconds(3f);
+        StartCoroutine(Animations.FadeInCoroutine(1f, GameUi.BlackForeground));
+        yield return new WaitForSeconds(1.1f);
         SceneManager.LoadScene((scene + 1).ToString());
     }
 }

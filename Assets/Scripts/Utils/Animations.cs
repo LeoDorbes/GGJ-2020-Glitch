@@ -17,7 +17,7 @@ namespace Utils
             while (progress < 1)
             {
                 var color1 = image.color;
-                image.color = new Color(color1.r, color1.g, color1.b, Mathf.Lerp(1, 0, progress));
+                image.color = new Color(color1.r, color1.g, color1.b, Mathf.Lerp(0, 1, progress));
                 progress += Time.deltaTime / fadeDuration;
 
                 yield return null;

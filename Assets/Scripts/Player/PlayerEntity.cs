@@ -10,7 +10,8 @@ namespace Player
         
         private PlayerMovementHandler _movementHandler;
         private TileSwitcherHandler _tileSwitcherHandler;
-        
+
+        public bool HasControl = true;
 
         private PlayerDirectionType _direction = PlayerDirectionType.Down;
 
@@ -24,6 +25,8 @@ namespace Player
 
         private void Update()
         {
+            if (!HasControl) return;
+            
             // Movement
             var direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
