@@ -13,24 +13,19 @@ namespace Tiles
         public float glitchRatio = 0f;
 
         public float glitchTimer = 0f;
-        
+
         public bool isInRandomZone = false;
-        
+
         public static float randomZone = 0.6f;
-        
+
         public static float randomChance = 0.1f;
-        
+
         private TileGraphicsHandler _graphicsHandler;
 
         public bool isBugged;
 
         [SerializeField] private BugTilePool bugTilePool;
 
-        public void UpdateRatio()
-        {
-            
-        }
-        
         private void Awake()
         {
             _graphicsHandler = GetComponent<TileGraphicsHandler>();
@@ -62,6 +57,5 @@ namespace Tiles
             this.isBugged = true;
             _graphicsHandler.DisplayBug(bugTilePool.bugSprites.RandomElement());
         }
-
     }
 }

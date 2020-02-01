@@ -1,4 +1,5 @@
 using System;
+using Interactibles;
 using Tiles;
 using UnityEngine;
 
@@ -7,7 +8,7 @@ namespace Player
     public class PlayerEntity : MonoBehaviour
     {
         [SerializeField] private LayerMask _interactionLayerMask;
-        
+
         private PlayerMovementHandler _movementHandler;
         private TileSwitcherHandler _tileSwitcherHandler;
 
@@ -39,9 +40,10 @@ namespace Player
             // Interaction
             if (Input.GetButtonDown("Jump"))
             {
-                var tileEntity = GetTileToInteractWith();
+                var interactibleEntity = GetInteractibleToInteractWith();
 
-                if (!tileEntity) return;
+                if (!interactibleEntity) return;
+                interactibleEntity.ChangeGlitchState();
             }
             
             // Test bug
@@ -63,7 +65,7 @@ namespace Player
             }
         }
 
-        private TileEntity GetTileToInteractWith()
+        private InteractibleEntity GetInteractibleToInteractWith()
         {
             var originX = 0f;
             var originY = 0f;
@@ -88,13 +90,13 @@ namespace Player
 
             var originFromPlayer = new Vector2(originX, originY);
             var hit = Physics2D.Raycast(
-                new Vector2(transform.position.x, transform.position.y) + originFromPlayer,
+                new Vector2(transform.position.x, transform.position.y + 0.5f) + originFromPlayer,
                 originFromPlayer.normalized,
                 10,
                 _interactionLayerMask
             );
 
-            return hit ? hit.collider.GetComponent<TileEntity>() : null;
+            return hit ? hit.collider.GetComponentInParent<InteractibleEntity>() : null;
         }
     }
 }

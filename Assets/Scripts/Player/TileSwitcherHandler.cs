@@ -1,4 +1,4 @@
-using System;
+using Interactibles;
 using Tiles;
 using UnityEngine;
 
@@ -9,9 +9,7 @@ namespace Player
         private CircleCollider2D _collider;
 
         private float rangeMultiplier = 1;
-        
-        
-        
+
         private void Awake()
         {
             _collider = GetComponent<CircleCollider2D>();
@@ -27,34 +25,34 @@ namespace Player
             var tileEntity = other.GetComponent<TileEntity>();
 
             if (!tileEntity) return;
-            
-            if (!tileEntity) return;
-            
+
             tileEntity.glitchRatio = (_collider.radius - Vector2.Distance(transform.position, tileEntity.transform.position)) / _collider.radius;
             tileEntity.SwitchCollided();
         }
-        
-        /*
+
         private void OnTriggerEnter2D(Collider2D other)
         {
-            var tileEntity = other.GetComponent<TileEntity>();
-    
-            if (!tileEntity) return;
+            var interactibleEntity = other.GetComponent<InteractibleEntity>();
 
-            Vector2.Distance(transform.position, tileEntity.transform.position);
-            tileEntity.SetGlitchedState(true);
+            if (!interactibleEntity) return;
+
+            interactibleEntity.ChangeNeonState(true);
         }
-        */
-        
+
         private void OnTriggerExit2D(Collider2D other)
         {
             var tileEntity = other.GetComponent<TileEntity>();
+            var interactibleEntity = other.GetComponent<InteractibleEntity>();
 
-            if (!tileEntity) return;
-            
-            tileEntity.glitchRatio = 0f;
-            tileEntity.SetGlitchedState(false);
+            if (tileEntity)
+            {
+                tileEntity.glitchRatio = 0f;
+                tileEntity.SetGlitchedState(false);
+            }
+            if (interactibleEntity)
+            {
+                interactibleEntity.ChangeNeonState(false);
+            }
         }
-   
     }
 }
