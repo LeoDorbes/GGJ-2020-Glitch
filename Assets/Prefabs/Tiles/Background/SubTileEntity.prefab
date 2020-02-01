@@ -131,6 +131,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9546ba13b337400480ed58718a88704e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  glitchProcessIsOccuring: 0
+  glitchRatio: 0
+  glitchTimer: 0
+  isInRandomZone: 0
+  isBugged: 0
+  bugTilePool: {fileID: 11400000, guid: 62fc359468c08f047bbeaa1c5ef401cf, type: 2}
 --- !u!114 &6654941877720567272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,4 +150,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _normalSprite: {fileID: 21300000, guid: 4938eab415355ab40a90c04b0371196d, type: 3}
-  _glitchedSprite: {fileID: 21300000, guid: f1a51226f4c786a43b1e90c54827df38, type: 3}
+  _neonSprite: {fileID: 21300000, guid: f1a51226f4c786a43b1e90c54827df38, type: 3}

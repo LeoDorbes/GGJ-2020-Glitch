@@ -1,26 +1,22 @@
 using System.Collections.Generic;
+using UnityEngine;
 using Utils;
 
 namespace Tiles
 {
     public class TileManager : Singleton<TileManager>
     {
-        public Dictionary<Point2, List<TileEntity>> Tiles { get; set; } = new Dictionary<Point2, List<TileEntity>>();
+        public float bugRatio;
+        public List<TileEntity> Tiles { get; set; } = new List<TileEntity>();
 
-        public void RegisterTile(Point2 position, TileEntity tile)
+        public void addBugs(float bugRatio)
         {
-            if (!Tiles.ContainsKey(position))
+            foreach (var tile in Tiles)
             {
-                Tiles[position] = new List<TileEntity>();
-            }
-            Tiles[position].Add(tile);
-        }
-
-        public void InvertGlitchedStateAtPosition(Point2 position)
-        {
-            if (Tiles.TryGetValue(position, out var tiles))
-            {
-                tiles.ForEach(tile => tile.SetGlitchedState(!tile.Glitched));
+                if (Random.value < bugRatio)
+                {
+                    tile.SetBugState();
+                }
             }
         }
     }
