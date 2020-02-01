@@ -10,6 +10,7 @@ namespace Player
         
         private PlayerMovementHandler _movementHandler;
         private TileSwitcherHandler _tileSwitcherHandler;
+        
 
         private PlayerDirectionType _direction = PlayerDirectionType.Down;
 

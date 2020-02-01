@@ -8,7 +8,7 @@ namespace Utils
     public class Animations : MonoBehaviour
     {
         
-        private IEnumerator FadeInCoroutine(float fadeDuration, Image image)
+        public static IEnumerator FadeInCoroutine(float fadeDuration, Image image)
         {
             float progress = 0f;
             var color = image.color;
@@ -27,7 +27,7 @@ namespace Utils
             image.color = color2;
         }
 
-        private IEnumerator FadeOutFadeInCoroutine(float fadeDuration, Image image)
+        public static IEnumerator FadeOutFadeInCoroutine(float fadeDuration, Image image)
         {
             float progress = 0f;
             var color = image.color;
