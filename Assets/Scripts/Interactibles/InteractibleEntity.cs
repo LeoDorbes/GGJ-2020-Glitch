@@ -1,4 +1,5 @@
 using UnityEngine;
+using Utils;
 
 namespace Interactibles
 {
@@ -28,6 +29,16 @@ namespace Interactibles
             if (!_glitchable) return;
 
             Glitched = !Glitched;
+
+            var soundPath = "event:/SD/SOUND_GET_UNGLITCHED";
+            
+            if (Glitched)
+            {
+                soundPath = "event:/SD/SOUND_GET_GLITCHED";
+            }
+            
+            Sound.PlaySoundOneShot(soundPath, transform);
+            
             _playerCollider.enabled = !_playerCollider.enabled;
             _graphicsHandler.GlitchStateUpdated();
         }
