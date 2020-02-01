@@ -39,7 +39,12 @@ namespace Player
                 var tileEntity = GetTileToInteractWith();
 
                 if (!tileEntity) return;
-                TileManager.I.InvertGlitchedStateAtPosition(tileEntity.Position);
+            }
+            
+            // Test bug
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                TileManager.I.addBugs(0.05f);
             }
         }
 

@@ -23,6 +23,17 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.64
       objectReference: {fileID: 0}
+    - target: {fileID: 4387932814795979017, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: bugTilePool
+      value: 
+      objectReference: {fileID: 11400000, guid: 62fc359468c08f047bbeaa1c5ef401cf,
+        type: 2}
+    - target: {fileID: 4387932814795979017, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: isBugged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5149302426829208293, guid: 5aedc99124b9e294b905de19ac6b4cd1,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

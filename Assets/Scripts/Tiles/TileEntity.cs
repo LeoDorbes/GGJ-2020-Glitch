@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Utils;
 
@@ -23,6 +22,10 @@ namespace Tiles
         
         private TileGraphicsHandler _graphicsHandler;
 
+        public bool isBugged;
+
+        [SerializeField] private BugTilePool bugTilePool;
+
         public void UpdateRatio()
         {
             
@@ -35,9 +38,7 @@ namespace Tiles
 
         private void Start()
         {
-            Position = new Point2(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y));
-
-            TileManager.I.RegisterTile(Position, this);
+            TileManager.I.Tiles.Add(this);
         }
 
         public void SetGlitchedState(bool glitched)
@@ -51,6 +52,11 @@ namespace Tiles
             _graphicsHandler.StartAmbiantGlitch();
         }
         
+        public void SetBugState()
+        {
+            this.isBugged = true;
+            _graphicsHandler.DisplayBug(bugTilePool.bugSprites.RandomElement());
+        }
 
     }
 }

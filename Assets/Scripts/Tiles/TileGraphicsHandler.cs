@@ -20,12 +20,18 @@ namespace Tiles
 
         public void DisplayGlitchedState(bool glitched)
         {
-            _spriteRenderer.sprite = glitched ? _neonSprite : _normalSprite;
+            if(!_tileEntity.isBugged)
+                _spriteRenderer.sprite = glitched ? _neonSprite : _normalSprite;
+        }
+
+        public void DisplayBug(Sprite buggedSprite)
+        {
+            _spriteRenderer.sprite = buggedSprite;
         }
         
         public void StartAmbiantGlitch()
         {
-            if (!_tileEntity.glitchProcessIsOccuring)
+            if (!_tileEntity.glitchProcessIsOccuring && !_tileEntity.isBugged)
             {
                 _tileEntity.glitchProcessIsOccuring = true;
                 StartCoroutine(glitchCoroutine());
@@ -35,7 +41,7 @@ namespace Tiles
         public IEnumerator glitchCoroutine()
         {
             bool randomZoneChanged;
-            while (_tileEntity.glitchRatio > 0f)
+            while (_tileEntity.glitchRatio > 0f && !_tileEntity.isBugged)
             {
                 randomZoneChanged = false;
                 _tileEntity.glitchTimer = 1.5f;

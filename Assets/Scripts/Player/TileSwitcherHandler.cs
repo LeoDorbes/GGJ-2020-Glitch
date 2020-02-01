@@ -25,11 +25,12 @@ namespace Player
         private void OnTriggerStay2D(Collider2D other)
         {
             var tileEntity = other.GetComponent<TileEntity>();
+
+            if (!tileEntity) return;
             
             if (!tileEntity) return;
             
             tileEntity.glitchRatio = (_collider.radius - Vector2.Distance(transform.position, tileEntity.transform.position)) / _collider.radius;
-
             tileEntity.SwitchCollided();
         }
         
