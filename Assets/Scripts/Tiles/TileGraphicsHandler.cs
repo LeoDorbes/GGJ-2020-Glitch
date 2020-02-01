@@ -20,8 +20,11 @@ namespace Tiles
 
         public void DisplayGlitchedState(bool glitched)
         {
-            if(!_tileEntity.isBugged)
+            if (!_tileEntity.isBugged)
+            {
                 _spriteRenderer.sprite = glitched ? _neonSprite : _normalSprite;
+            }
+                
         }
 
         public void DisplayBug(Sprite buggedSprite)
