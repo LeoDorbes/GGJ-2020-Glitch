@@ -77,13 +77,13 @@ PrefabInstance:
         type: 3}
       propertyPath: _neonSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9b23bf2e1494e9e43919e45f006973bc,
+      objectReference: {fileID: 21300000, guid: bddb8c287f8acb542889dd8e30b238a3,
         type: 3}
     - target: {fileID: 7545764799105785335, guid: 818c5592b5ee6f149a165f6f94bebcb1,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f917072ac7130ce4f9c8638a41764fc3,
+      objectReference: {fileID: 21300000, guid: f9220bae8ba39c244808be607fe0791b,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 818c5592b5ee6f149a165f6f94bebcb1, type: 3}
