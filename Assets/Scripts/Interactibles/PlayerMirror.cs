@@ -16,11 +16,13 @@ namespace Interactibles
         private bool _endAnim;
         private bool _hintShown;
         private EventInstance _glitchSound;
+        private bool _musicStarted;
 
         private void Start()
         {
             _glitchSound = Sound.CreateSoundInstance("event:/SD/SOUND_GLITCH_IN");
             _glitchSound.setVolume(1);
+            GameManager.I._ambianceManager.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
         private void Update()
         {
@@ -33,11 +35,17 @@ namespace Interactibles
                 _player.GetComponent<PlayerEntity>().ShowActionHint(true);
                 _hintShown = true;
             }
-            if (Mathf.Abs(diff) <= 5f && Input.GetButtonDown("Jump"))
+            if (Mathf.Abs(diff) <= 5f && Input.GetButtonDown("Jump") && !_endAnim)
             {
                 _endAnim = true;
 
                 StartCoroutine(EndAnimation());
+            }
+
+            if (transform.position.x < 100 && !_musicStarted)
+            {
+                _musicStarted = true;
+                Sound.PlaySoundOneShot("event:/SD/Amb/Amb_Title");
             }
         }
 
@@ -51,7 +59,10 @@ namespace Interactibles
                 
             _player.DOJump(transform.position - new Vector3(1, 0, 0), 5, 1, 2);
             transform.DOJump(_player.position + new Vector3(1, 0, 0), 5, 1, 2);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
+            Sound.PlaySoundOneShot("event:/SD/SOUND_GET_GLITCHED");
+            yield return new WaitForSeconds(1f);
+
             StartCoroutine(Animations.FadeInCoroutine(1.6f, GameManager.I.GameUi.BlackForeground));
             yield return new WaitForSeconds(2f);
 

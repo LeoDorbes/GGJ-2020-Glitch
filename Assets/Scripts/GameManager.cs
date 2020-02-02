@@ -13,7 +13,7 @@ using Utils;
 public class GameManager : Singleton<GameManager>
 {
     private EventInstance _musicManager;
-    private EventInstance _ambianceManager;
+    public EventInstance _ambianceManager;
 
     public GameUi GameUi { get; set; }
     private void Start()

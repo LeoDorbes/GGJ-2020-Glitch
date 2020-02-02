@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils;
 using Random = UnityEngine.Random;
@@ -38,7 +40,13 @@ namespace Tiles
         private void Start()
         {
             SceneManager.sceneUnloaded += arg0 => Tiles.Clear();
-            SceneManager.sceneLoaded += (arg0, mode) => SetBugs();
+            SceneManager.sceneLoaded += (arg0, mode) => StartCoroutine(SetBugsCoroutine());
+        }
+
+        private IEnumerator SetBugsCoroutine()
+        {
+            yield return new WaitForEndOfFrame();
+            SetBugs();
         }
     }
 }

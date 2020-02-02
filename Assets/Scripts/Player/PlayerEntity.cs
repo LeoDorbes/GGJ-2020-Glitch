@@ -59,7 +59,11 @@ namespace Player
             }
             
             var interactibleEntity = GetInteractibleToInteractWith();
-            if (!interactibleEntity) return;
+            if (!interactibleEntity)
+            {
+                ShowActionHint(false);
+                return;
+            }
             
             ShowActionHint(true);
 
