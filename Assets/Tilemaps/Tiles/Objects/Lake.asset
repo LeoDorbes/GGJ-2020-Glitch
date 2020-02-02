@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: Lake
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 0}
-  m_DefaultGameObject: {fileID: 0}
+  m_DefaultSprite: {fileID: 21300000, guid: 1f8194d88a0b09f4a9205f77df903b46, type: 3}
+  m_DefaultGameObject: {fileID: 1839251948765473570, guid: 4ff8700f2ed76d34fb301dfa811decd1,
+    type: 3}
   m_DefaultColliderType: 1
   m_TilingRules: []
