@@ -192,13 +192,13 @@ PrefabInstance:
         type: 3}
       propertyPath: _neonSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3194f6709dae42341a8dd058fbf8d66c,
+      objectReference: {fileID: 21300000, guid: 6cb1a72fef1c3fe4abbd4778c4a99843,
         type: 3}
     - target: {fileID: 4397138248169095199, guid: 0ce28e7ea04b95f44aef3ca1d1f66c0d,
         type: 3}
       propertyPath: _glitchedSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3194f6709dae42341a8dd058fbf8d66c,
+      objectReference: {fileID: 21300000, guid: 6cb1a72fef1c3fe4abbd4778c4a99843,
         type: 3}
     - target: {fileID: 4779122459194523343, guid: 0ce28e7ea04b95f44aef3ca1d1f66c0d,
         type: 3}
