@@ -35,8 +35,6 @@ public class GameManager : Singleton<GameManager>
     public void SetBugLevel()
     {
         var ratio = Mathf.Clamp(TileManager.I.BugRatio * 100 + 1, 1, 100);
-        Debug.Log(TileManager.I.BugRatio);
-        Debug.Log(ratio);
         _musicManager.setParameterByName("bugLevel", ratio);
     }
 
@@ -48,6 +46,7 @@ public class GameManager : Singleton<GameManager>
     private IEnumerator LoadNextLevelCoroutine()
     {
         PlayerManager.I.Player.HasControl = false;
+        Sound.PlaySoundOneShot("event:/SD/SOUND_WARP_OUT", PlayerManager.I.Player.transform);
         PlayerManager.I.Player.transform.DOScale(new Vector3(0.2f, 0.2f, 0.2f), 1.5f);
         PlayerManager.I.Player.transform.DORotate(new Vector3(0, 0, 180), 1.5f);
         yield return new WaitForSeconds(2f);

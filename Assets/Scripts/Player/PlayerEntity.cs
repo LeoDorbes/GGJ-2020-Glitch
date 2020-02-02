@@ -30,6 +30,7 @@ namespace Player
             _movementHandler = GetComponent<PlayerMovementHandler>();
             _movementHandler.Player = this;
             _tileSwitcherHandler = GetComponent<TileSwitcherHandler>();
+            Sound.PlaySoundOneShot("event:/SD/SOUND_WARP_IN", transform);
             transform.DOScale(Vector3.one, 1.5f);
             transform.DORotate(Vector3.zero, 1.5f);
         }
