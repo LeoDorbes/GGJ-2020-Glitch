@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DG.Tweening;
 using FMOD.Studio;
 using Player;
 using Tiles;
@@ -45,6 +46,9 @@ public class GameManager : Singleton<GameManager>
     private IEnumerator LoadNextLevelCoroutine()
     {
         PlayerManager.I.Player.HasControl = false;
+        PlayerManager.I.Player.transform.DOScale(new Vector3(0.2f, 0.2f, 0.2f), 1.5f);
+        PlayerManager.I.Player.transform.DORotate(new Vector3(0, 0, 180), 1.5f);
+        return new WaitForSeconds(2f);
         var scene = int.Parse(SceneManager.GetActiveScene().name);
 
         
