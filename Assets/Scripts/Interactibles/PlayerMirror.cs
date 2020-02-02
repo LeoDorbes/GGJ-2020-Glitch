@@ -18,7 +18,6 @@ namespace Interactibles
         private void Start()
         {
             _glitchSound = Sound.CreateSoundInstance("event:/SD/SOUND_GLITCH_IN");
-            _glitchSound.set3DAttributes()
             _glitchSound.setVolume(1);
         }
         private void Update()
