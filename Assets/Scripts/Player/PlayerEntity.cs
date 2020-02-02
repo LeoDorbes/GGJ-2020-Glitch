@@ -64,7 +64,7 @@ namespace Player
             interactibleEntity.ChangeGlitchState();
             if (!interactibleEntity.AlreadyInteracted)
             {
-                TileManager.I.addBugs(0.05f);
+                TileManager.I.addBugs(0.02f);
                 GameManager.I.SetBugLevel();
                 interactibleEntity.AlreadyInteracted = true;
             }

@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-8455131114179681846
+=======
+--- !u!114 &-9145436477176934130
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,11 +14,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/SD/Amb/Amb
+=======
+  m_Name: event:/SD/SOUND_LASER
+>>>>>>> master
   m_EditorClassIdentifier: 
   Path: event:/SD/Amb/Amb
   guid: 735cb07c21645b48930b0ff5597b2a11
   Banks:
+<<<<<<< HEAD
   - {fileID: -7100372915335486755}
   IsStream: 1
   Is3D: 0
@@ -24,6 +33,16 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 30000
 --- !u!114 &-8243489126114978737
+=======
+  - {fileID: -4774397290658290727}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &-5877758133063646286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,6 +52,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/SOUND_GET_GLITCHED
+  m_EditorClassIdentifier: 
+  Path: event:/SD/SOUND_GET_GLITCHED
+  guid: a85dac17c34ee245b28a217d42e220a1
+  Banks:
+  - {fileID: -4774397290658290727}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3614
+--- !u!114 &-5624712225013971542
+>>>>>>> master
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/SD/Footsteps/Footsteps_character
   m_EditorClassIdentifier: 
   Path: event:/SD/Footsteps/Footsteps_character
@@ -40,13 +84,26 @@ MonoBehaviour:
   Banks:
   - {fileID: -7100372915335486755}
   IsStream: 1
+=======
+  m_Name: event:/SD/SOUND_GET_UNGLITCHED
+  m_EditorClassIdentifier: 
+  Path: event:/SD/SOUND_GET_UNGLITCHED
+  guid: 59b6dc98de8727438c77916671d4cffc
+  Banks:
+  - {fileID: -4774397290658290727}
+  IsStream: 0
+>>>>>>> master
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+<<<<<<< HEAD
   Length: 1750
 --- !u!114 &-7100372915335486755
+=======
+  Length: 4500
+--- !u!114 &-4774397290658290727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,15 +115,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: C:/Users/barbe/Desktop/glitch/FMOD Assets/Desktop/Master.bank
+  Path: C:/Users/Shadow/Documents/Projects/glitch/FMOD Assets/Desktop/Master.bank
   SubDir: 
-  lastModified: 637162343544993003
+  lastModified: 637162043185085119
   LoadResult: 0
   FileSizes:
   - Name: 
     Value: 19389280
   Exists: 1
+--- !u!114 &-3230334085594967355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Generative/bugLevel
+  m_EditorClassIdentifier: 
+  Name: bugLevel
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-2720015243158966071
+>>>>>>> master
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  Path: C:/Users/barbe/Desktop/glitch/FMOD Assets/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162343544993003
+=======
+  Path: C:/Users/Shadow/Documents/Projects/glitch/FMOD Assets/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637162043077515146
+>>>>>>> master
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1318
+  Exists: 1
+<<<<<<< HEAD
 --- !u!114 &-5564666232673246719
+=======
+--- !u!114 &-2677542475006740803
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,18 +181,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/SD/SOUND_GET_UNGLITCHED
+=======
+  m_Name: event:/SD/SOUND_GLITCH_IN
+>>>>>>> master
   m_EditorClassIdentifier: 
-  Path: event:/SD/SOUND_GET_UNGLITCHED
-  guid: 59b6dc98de8727438c77916671d4cffc
+  Path: event:/SD/SOUND_GLITCH_IN
+  guid: c61717009d8f8d4ebf4e2a1a79adffb5
   Banks:
+<<<<<<< HEAD
   - {fileID: -7100372915335486755}
   IsStream: 0
+=======
+  - {fileID: -4774397290658290727}
+  IsStream: 1
+>>>>>>> master
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+<<<<<<< HEAD
   Length: 4500
 --- !u!114 &-3918656589326213188
 MonoBehaviour:
@@ -113,6 +228,10 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 500
 --- !u!114 &-3633390155142145721
+=======
+  Length: 16000
+--- !u!114 &11400000
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/SD/SOUND_GET_GLITCHED
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: event:/SD/SOUND_GET_GLITCHED
   guid: a85dac17c34ee245b28a217d42e220a1
   Banks:
@@ -136,6 +256,27 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 3614
 --- !u!114 &11400000
+=======
+  EditorBanks:
+  - {fileID: -2720015243158966071}
+  - {fileID: -4774397290658290727}
+  EditorEvents:
+  - {fileID: 2782319625614728286}
+  - {fileID: 7483198419575600128}
+  - {fileID: -5624712225013971542}
+  - {fileID: 696167521698998581}
+  - {fileID: -5877758133063646286}
+  - {fileID: -2677542475006740803}
+  - {fileID: -9145436477176934130}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -4774397290658290727}
+  StringsBanks:
+  - {fileID: -2720015243158966071}
+  stringsBankWriteTime: 637162043077515146
+  cacheVersion: 3
+--- !u!114 &696167521698998581
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,6 +285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
@@ -183,6 +325,23 @@ MonoBehaviour:
   Default: 0
   Exists: 1
 --- !u!114 &1411446682064945526
+=======
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/Amb/Amb
+  m_EditorClassIdentifier: 
+  Path: event:/SD/Amb/Amb
+  guid: 735cb07c21645b48930b0ff5597b2a11
+  Banks:
+  - {fileID: -4774397290658290727}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 30000
+--- !u!114 &2782319625614728286
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,6 +351,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/SD/SOUND_GLITCH_IN
   m_EditorClassIdentifier: 
   Path: event:/SD/SOUND_GLITCH_IN
@@ -206,6 +366,24 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 16000
 --- !u!114 &1692244692519731612
+=======
+  m_Name: event:/Music/Music_Generative
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Generative
+  guid: 04958671d7be6847922550a093ebf93a
+  Banks:
+  - {fileID: -4774397290658290727}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4226325550433445140}
+  - {fileID: -3230334085594967355}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 129333
+--- !u!114 &4226325550433445140
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,6 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: C:/Users/barbe/Desktop/glitch/FMOD Assets/Desktop/Master.strings.bank
   SubDir: 
   lastModified: 637162343535830085
@@ -226,6 +405,14 @@ MonoBehaviour:
     Value: 1318
   Exists: 1
 --- !u!114 &5960443128383419482
+=======
+  Name: fin
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
+--- !u!114 &7483198419575600128
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,11 +422,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Music/Music_Generative
+=======
+  m_Name: event:/SD/Footsteps/Footsteps_character
+>>>>>>> master
   m_EditorClassIdentifier: 
   Path: event:/Music/Music_Generative
   guid: 04958671d7be6847922550a093ebf93a
   Banks:
+<<<<<<< HEAD
   - {fileID: -7100372915335486755}
   IsStream: 1
   Is3D: 0
@@ -267,3 +459,13 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 1
+=======
+  - {fileID: -4774397290658290727}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1750
+>>>>>>> master

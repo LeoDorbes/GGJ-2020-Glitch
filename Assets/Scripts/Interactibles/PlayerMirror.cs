@@ -18,12 +18,13 @@ namespace Interactibles
         private void Start()
         {
             _glitchSound = Sound.CreateSoundInstance("event:/SD/SOUND_GLITCH_IN");
-            _glitchSound.setVolume(0);
+            _glitchSound.setVolume(1);
         }
         private void Update()
         {
             var diff = _player.position.x - transform.position.x;
-            _glitchSound.setVolume(180 / (diff + 3));
+            var volume = 120 / (Mathf.Abs(diff) + 5) * 100 + 1;
+            _glitchSound.setVolume(volume);
             if (diff <= 3f && Input.GetButtonDown("Jump"))
             {
                 _endAnim = true;

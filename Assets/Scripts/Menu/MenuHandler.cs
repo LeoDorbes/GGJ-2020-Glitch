@@ -7,7 +7,7 @@ namespace Menu
     {
         public void StartGame()
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("IntroDialogue");
         }
 
         public void QuitGame()

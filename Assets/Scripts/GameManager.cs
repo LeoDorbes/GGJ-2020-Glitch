@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DG.Tweening;
 using FMOD.Studio;
 using Player;
 using Tiles;
@@ -22,11 +23,10 @@ public class GameManager : Singleton<GameManager>
             Destroy(gameObject);
         }
         _musicManager = Sound.CreateSoundInstance("event:/Music/Music_Generative");
-        
-        // TODO - REMOVE
-        _musicManager.setParameterByName("bugLevel", 100);
 
         _ambianceManager = Sound.CreateSoundInstance("event:/SD/Amb/Amb");
+        
+        SetBugLevel();
 
         _ambianceManager.start();
         _musicManager.start();
@@ -34,7 +34,8 @@ public class GameManager : Singleton<GameManager>
 
     public void SetBugLevel()
     {
-        _musicManager.setParameterByName("bugLevel", TileManager.I.BugRatio);
+        var ratio = Mathf.Clamp(TileManager.I.BugRatio * 100 + 1, 1, 100);
+        _musicManager.setParameterByName("bugLevel", ratio);
     }
 
     public void LoadNextLevel()
@@ -45,6 +46,9 @@ public class GameManager : Singleton<GameManager>
     private IEnumerator LoadNextLevelCoroutine()
     {
         PlayerManager.I.Player.HasControl = false;
+        PlayerManager.I.Player.transform.DOScale(new Vector3(0.2f, 0.2f, 0.2f), 1.5f);
+        PlayerManager.I.Player.transform.DORotate(new Vector3(0, 0, 180), 1.5f);
+        yield return new WaitForSeconds(2f);
         var scene = int.Parse(SceneManager.GetActiveScene().name);
 
         
@@ -62,6 +66,5 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForSeconds(1.8f);
             SceneManager.LoadSceneAsync("LastScene");
         }
-        
     }
 }
