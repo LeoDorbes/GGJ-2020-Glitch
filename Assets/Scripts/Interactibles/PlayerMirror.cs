@@ -14,6 +14,7 @@ namespace Interactibles
         [SerializeField] private Transform _player;
         [SerializeField] private Animator _animator;
         private bool _endAnim;
+        private bool _hintShown;
         private EventInstance _glitchSound;
 
         private void Start()
@@ -26,6 +27,12 @@ namespace Interactibles
             var diff = _player.position.x - transform.position.x;
             var volume = 120 / (Mathf.Abs(diff) + 5) * 100 + 1;
             _glitchSound.setVolume(volume);
+
+            if (Mathf.Abs(diff) <= 5f && !_endAnim && !_hintShown)
+            {
+                _player.GetComponent<PlayerEntity>().ShowActionHint(true);
+                _hintShown = true;
+            }
             if (Mathf.Abs(diff) <= 5f && Input.GetButtonDown("Jump"))
             {
                 _endAnim = true;
