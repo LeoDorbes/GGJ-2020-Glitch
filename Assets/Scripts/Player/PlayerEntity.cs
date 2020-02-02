@@ -17,6 +17,8 @@ namespace Player
         private PlayerMovementHandler _movementHandler;
         private TileSwitcherHandler _tileSwitcherHandler;
 
+        public GameObject ActionHint;
+
         public bool HasControl = true;
 
         private PlayerDirectionType _direction = PlayerDirectionType.Down;
@@ -31,6 +33,15 @@ namespace Player
             transform.DOScale(Vector3.one, 1.5f);
             transform.DORotate(Vector3.zero, 1.5f);
         }
+        public void ShowActionHint(bool show)
+        {
+            var targetColor = new Color(1, 1, 1, 0);
+            if (show)
+            {
+                targetColor = new Color(1, 1, 1, 0.8f);
+            }
+            ActionHint.GetComponent<SpriteRenderer>().DOColor(targetColor, .5f);
+        }
 
         private void Update()
         {
@@ -44,13 +55,15 @@ namespace Player
                 _movementHandler.MoveInDirection(direction.normalized, direction.magnitude);
                 SetDirectionType(direction);
             }
+            
+            var interactibleEntity = GetInteractibleToInteractWith();
+            if (!interactibleEntity) return;
+            
+            ShowActionHint(true);
 
             // Interaction
             if (Input.GetButtonDown("Jump"))
             {
-                var interactibleEntity = GetInteractibleToInteractWith();
-
-                if (!interactibleEntity) return;
                 _animator.SetTrigger("doAction");
                 StartCoroutine(GlitchEntity(interactibleEntity));
             }
