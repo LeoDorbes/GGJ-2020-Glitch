@@ -54,7 +54,7 @@ public class GameManager : Singleton<GameManager>
             StartCoroutine(Animations.FadeInCoroutine(1.6f, GameUi.BlackForeground));
             _musicManager.setParameterByName("fin", 1);
             yield return new WaitForSeconds(1.8f);
-            SceneManager.LoadScene("LastScene");
+            SceneManager.LoadSceneAsync("LastScene");
         }
         
     }

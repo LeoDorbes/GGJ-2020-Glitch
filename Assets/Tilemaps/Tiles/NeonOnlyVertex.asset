@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: NeonOnlyVertex
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: ffd365ca031ff6845be27160dba9430f, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: c426351bb31472a4b845e7e2df6adc6c, type: 3}
   m_DefaultGameObject: {fileID: 7088466726187776354, guid: e6865338becaca3458b528a002584325,
     type: 3}
   m_DefaultColliderType: 1
