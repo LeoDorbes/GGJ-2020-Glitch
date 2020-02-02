@@ -22,11 +22,10 @@ public class GameManager : Singleton<GameManager>
             Destroy(gameObject);
         }
         _musicManager = Sound.CreateSoundInstance("event:/Music/Music_Generative");
-        
-        // TODO - REMOVE
-        _musicManager.setParameterByName("bugLevel", 100);
 
         _ambianceManager = Sound.CreateSoundInstance("event:/SD/Amb/Amb");
+        
+        SetBugLevel();
 
         _ambianceManager.start();
         _musicManager.start();
@@ -34,7 +33,8 @@ public class GameManager : Singleton<GameManager>
 
     public void SetBugLevel()
     {
-        _musicManager.setParameterByName("bugLevel", TileManager.I.BugRatio);
+        var ratio = Mathf.Clamp(TileManager.I.BugRatio * 100 + 1, 1, 100);
+        _musicManager.setParameterByName("bugLevel", ratio);
     }
 
     public void LoadNextLevel()

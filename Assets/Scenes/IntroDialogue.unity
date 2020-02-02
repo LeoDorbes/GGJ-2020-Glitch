@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -60, y: -60}
+  m_AnchoredPosition: {x: 60, y: -28}
+  m_SizeDelta: {x: -883.2, y: -666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &253490501
 MonoBehaviour:
@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.8901961}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.49019608}
+  m_EffectDistance: {x: 1.5, y: -1.5}
   m_UseGraphicAlpha: 1
 --- !u!114 &253490502
 MonoBehaviour:
@@ -193,13 +193,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: 1897f09999f10814aa8520da8c8deee4, type: 3}
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 1100981412}
   - component: {fileID: 1100981411}
   - component: {fileID: 1100981410}
+  - component: {fileID: 1100981413}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -249,8 +250,8 @@ Camera:
   m_GameObject: {fileID: 1100981409}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -297,6 +298,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1100981413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100981409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_CameraOutput: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &1386898546
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,9 +529,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: -400, y: 300}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 960, y: 0}
+  m_SizeDelta: {x: 1434, y: 843}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1719783809
 MonoBehaviour:
@@ -516,14 +548,14 @@ MonoBehaviour:
   _dialogs:
   - Text: '"No way, I''m not adding a feature 30 minutes before the end of a game
       jam!"'
-    Background: {fileID: 0}
+    Background: {fileID: 21300000, guid: 90eeab8e2b3ba0b4e8a9a58922732818, type: 3}
   - Text: '"Man we have to add it, the feature basically is the game ! Don''y worry
       I''ve tested it, it''s bug free."'
-    Background: {fileID: 0}
+    Background: {fileID: 21300000, guid: 90eeab8e2b3ba0b4e8a9a58922732818, type: 3}
   - Text: '"Alright alright, I''ll add your code to the build..."'
-    Background: {fileID: 0}
+    Background: {fileID: 21300000, guid: 5abfccead69f18841a68b438c4a05e90, type: 3}
   _dialogBox: {fileID: 1719783807}
-  _nextSceneName: Level1
+  _nextSceneName: 1
 --- !u!114 &1719783810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,7 +574,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 90eeab8e2b3ba0b4e8a9a58922732818, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

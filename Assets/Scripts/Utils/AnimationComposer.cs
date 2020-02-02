@@ -91,7 +91,7 @@ namespace Utils
             {
                 _initialRotateTransforms.Clear();
                 _rotationTransforms.ForEach(t => _initialRotateTransforms.Add(t));
-                var endRotation = new Vector3(transform.localPosition.x, transform.localRotation.y,
+                var endRotation = new Vector3(transform.localRotation.x, transform.localRotation.y,
                     transform.localRotation.z + _endRotation);
                 if (_loopRotationAnimation)
                 {
