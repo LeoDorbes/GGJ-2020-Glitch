@@ -266,8 +266,8 @@ MonoBehaviour:
   _animateRotation: 1
   _rotationTransforms:
   - {fileID: 8563986547067377695}
-  _endRotation: -359
-  _rotationAnimationDuration: 2.8
+  _endRotation: -180
+  _rotationAnimationDuration: 2
   _loopRotationAnimation: 1
 --- !u!1 &5919353001518403160
 GameObject:
@@ -381,6 +381,6 @@ MonoBehaviour:
   _animateRotation: 1
   _rotationTransforms:
   - {fileID: 2333909624037005453}
-  _endRotation: 359
-  _rotationAnimationDuration: 5
+  _endRotation: -180
+  _rotationAnimationDuration: 3.8
   _loopRotationAnimation: 1
