@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using Interactibles;
 using Tiles;
@@ -51,12 +52,22 @@ namespace Player
 
                 if (!interactibleEntity) return;
                 interactibleEntity.ChangeGlitchState();
+                _animator.SetTrigger("doAction");
+                StartCoroutine(GiveControl(true, 1f));
+                HasControl = false;
                 if (!interactibleEntity.AlreadyInteracted)
                 {
                     TileManager.I.addBugs(0.01f);
                     interactibleEntity.AlreadyInteracted = true;
                 }
+                
             }
+        }
+
+        private IEnumerator GiveControl(bool giveControl, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            HasControl = giveControl;
         }
 
         private void SetDirectionType(Vector2 direction)
