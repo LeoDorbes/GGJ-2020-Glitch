@@ -275,6 +275,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bush
       objectReference: {fileID: 0}
+    - target: {fileID: 7318174131548648412, guid: 28b5b3f9cce9d5e4592d4589733613fb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8726070337340815733, guid: 28b5b3f9cce9d5e4592d4589733613fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -329,6 +334,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947133037104924123, guid: 28b5b3f9cce9d5e4592d4589733613fb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b5b3f9cce9d5e4592d4589733613fb, type: 3}
