@@ -13,4 +13,24 @@ MonoBehaviour:
   m_Name: BugTilePool
   m_EditorClassIdentifier: 
   bugSprites:
-  - {fileID: 21300000, guid: d0c2b8d8d01054b4294dda85ca3d3068, type: 3}
+  - {fileID: 21300000, guid: a38d160a1ec13de4ab3c69ee09977453, type: 3}
+  - {fileID: 21300000, guid: 558fd66a5d83d2240a483aa8266d3cd1, type: 3}
+  - {fileID: 21300000, guid: 120091cb77ca715438a60be8f1eca461, type: 3}
+  - {fileID: 21300000, guid: cf7094c6ce1693b4885737ae54d8ddc3, type: 3}
+  - {fileID: 21300000, guid: 2710d180823b78242adb7cb6604a95d7, type: 3}
+  - {fileID: 21300000, guid: 620f40cc415ed7043af009a4b299a83c, type: 3}
+  - {fileID: 21300000, guid: 9ef2b3269fde6034b90c9ff696c88df7, type: 3}
+  - {fileID: 21300000, guid: 3e217dc95c33e0f4db87dbfa3039e3fe, type: 3}
+  - {fileID: 21300000, guid: de6fa3636937f984d8d4ac7e50e6316d, type: 3}
+  - {fileID: 21300000, guid: 1aeb372e54c2b294e89a74ae590296de, type: 3}
+  - {fileID: 21300000, guid: 56edba70f79a1bf47a66c03d45a139ed, type: 3}
+  - {fileID: 21300000, guid: 2373dbf169cea2b449a78ce35ef35c17, type: 3}
+  - {fileID: 21300000, guid: bdedd3f14881cd64199ac876c10c452d, type: 3}
+  - {fileID: 21300000, guid: 08d33343a05f66645b4b83c410916f9f, type: 3}
+  - {fileID: 21300000, guid: 456c8ff8860657d499ebea4c9b0ee023, type: 3}
+  - {fileID: 21300000, guid: 541bf015e74237d4ab349720ba00164a, type: 3}
+  - {fileID: 21300000, guid: 17633d3b9dbe1464ab2bf749716be0b3, type: 3}
+  - {fileID: 21300000, guid: 2c4cf804a689e7249adbeaef96080191, type: 3}
+  - {fileID: 21300000, guid: e35963cd630a1464384db5280baf1e5f, type: 3}
+  - {fileID: 21300000, guid: 00d64b9cc40ebfb4d8ecc934b61f534b, type: 3}
+  - {fileID: 21300000, guid: dc37a2ee75b66414195752eb3e55d830, type: 3}
