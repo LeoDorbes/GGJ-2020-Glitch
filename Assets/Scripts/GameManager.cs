@@ -35,6 +35,8 @@ public class GameManager : Singleton<GameManager>
     public void SetBugLevel()
     {
         var ratio = Mathf.Clamp(TileManager.I.BugRatio * 100 + 1, 1, 100);
+        Debug.Log(TileManager.I.BugRatio);
+        Debug.Log(ratio);
         _musicManager.setParameterByName("bugLevel", ratio);
     }
 
@@ -52,7 +54,7 @@ public class GameManager : Singleton<GameManager>
         var scene = int.Parse(SceneManager.GetActiveScene().name);
 
         
-        if (scene != 2)
+        if (scene < 2)
         {
             StartCoroutine(Animations.FadeInCoroutine(1f, GameUi.BlackForeground));
             yield return new WaitForSeconds(1.1f);
@@ -64,7 +66,11 @@ public class GameManager : Singleton<GameManager>
             StartCoroutine(Animations.FadeInCoroutine(1.6f, GameUi.BlackForeground));
             _musicManager.setParameterByName("fin", 1);
             yield return new WaitForSeconds(1.8f);
+            TileManager.I.BugRatio = 0;
+            SetBugLevel();
+            
             SceneManager.LoadSceneAsync("LastScene");
+            
         }
     }
 }

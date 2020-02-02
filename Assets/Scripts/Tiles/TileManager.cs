@@ -9,14 +9,14 @@ namespace Tiles
     public class TileManager : Singleton<TileManager>
     {
         public List<TileEntity> Tiles { get; set; } = new List<TileEntity>();
-        
-        public float BugRatio { get; set; }
+
+        public float BugRatio { get; set; } = 0;
 
         public void addBugs(float bugRatio)
         {
+            BugRatio += bugRatio;
             foreach (var tile in Tiles)
             {
-                BugRatio += bugRatio;
                 if (Random.value < bugRatio)
                 {
                     tile.SetBugState();

@@ -186,7 +186,7 @@ MonoBehaviour:
   - Text: '"I told you we had to add this feature!"'
     Background: {fileID: 21300000, guid: 90eeab8e2b3ba0b4e8a9a58922732818, type: 3}
   _dialogBox: {fileID: 1030896305}
-  _nextSceneName: Credits
+  _nextSceneName: StartMenu
 --- !u!114 &1030896308
 MonoBehaviour:
   m_ObjectHideFlags: 0

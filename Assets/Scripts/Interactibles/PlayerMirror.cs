@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using DG.Tweening;
 using FMOD.Studio;
 using Player;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Utils;
 
 namespace Interactibles
@@ -25,17 +27,29 @@ namespace Interactibles
             var diff = _player.position.x - transform.position.x;
             var volume = 120 / (Mathf.Abs(diff) + 5) * 100 + 1;
             _glitchSound.setVolume(volume);
-            if (diff <= 3f && Input.GetButtonDown("Jump"))
+            if (Mathf.Abs(diff) <= 5f && Input.GetButtonDown("Jump"))
             {
                 _endAnim = true;
-                _player.GetComponent<PlayerEntity>().HasControl = false;
-                _player.DOScale(new Vector3(3, 3, 3), 6f);
-                transform.DOScale(new Vector3(3, 3, 3), 6f);
-                
-                _player.DOJump(transform.position - new Vector3(1, 0, 0), 5, 1, 10f);
-                transform.DOJump(_player.position + new Vector3(1, 0, 0), 5, 1, 10f);
 
+                StartCoroutine(EndAnimation());
             }
+        }
+
+        private IEnumerator EndAnimation()
+        {
+            var entity = _player.GetComponent<PlayerEntity>();
+
+            entity.HasControl = false;
+            entity._animator.SetTrigger("doAction");
+            _animator.SetTrigger("transform");
+                
+            _player.DOJump(transform.position - new Vector3(1, 0, 0), 5, 1, 2);
+            transform.DOJump(_player.position + new Vector3(1, 0, 0), 5, 1, 2);
+            yield return new WaitForSeconds(2f);
+            StartCoroutine(Animations.FadeInCoroutine(1.6f, GameManager.I.GameUi.BlackForeground));
+            yield return new WaitForSeconds(2f);
+
+            SceneManager.LoadSceneAsync("OutroDialogue");
         }
 
         private void FixedUpdate()
