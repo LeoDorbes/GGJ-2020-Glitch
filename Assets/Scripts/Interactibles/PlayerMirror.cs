@@ -3,7 +3,6 @@ using System.Collections;
 using DG.Tweening;
 using FMOD.Studio;
 using Player;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils;
