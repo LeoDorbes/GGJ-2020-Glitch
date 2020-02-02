@@ -11,18 +11,54 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: db0053ed4d337c545ba0e86b59c20047,
+      objectReference: {fileID: 21300000, guid: 5f7d7c154a3541c4883677d296104201,
         type: 3}
     - target: {fileID: 958147089791381973, guid: 5aedc99124b9e294b905de19ac6b4cd1,
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 958147089791381973, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 958147089791381973, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5149302426829208293, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5149302426829208293, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5149302426829208293, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5149302426829208293, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.64
+      objectReference: {fileID: 0}
     - target: {fileID: 6654941877720567272, guid: 5aedc99124b9e294b905de19ac6b4cd1,
         type: 3}
       propertyPath: _normalSprite
       value: 
-      objectReference: {fileID: 21300000, guid: db0053ed4d337c545ba0e86b59c20047,
+      objectReference: {fileID: 21300000, guid: 5f7d7c154a3541c4883677d296104201,
+        type: 3}
+    - target: {fileID: 6654941877720567272, guid: 5aedc99124b9e294b905de19ac6b4cd1,
+        type: 3}
+      propertyPath: _neonSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 61f26026762a7184d97cf6da3441afcf,
         type: 3}
     - target: {fileID: 7318174131548648412, guid: 5aedc99124b9e294b905de19ac6b4cd1,
         type: 3}
