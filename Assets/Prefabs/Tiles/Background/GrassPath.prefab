@@ -77,7 +77,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _neonSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9b23bf2e1494e9e43919e45f006973bc,
+      objectReference: {fileID: 21300000, guid: bddb8c287f8acb542889dd8e30b238a3,
         type: 3}
     - target: {fileID: 7545764799105785335, guid: 818c5592b5ee6f149a165f6f94bebcb1,
         type: 3}
