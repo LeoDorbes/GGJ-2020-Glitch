@@ -173,7 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _normalSprite: {fileID: 0}
   _neonSprite: {fileID: 0}
-  _glitchedSprite: {fileID: 0}
+  _glitchedSprite:
+  - {fileID: 0}
 --- !u!60 &2592646490482960355
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -226,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 999265860990130165}
   - component: {fileID: 2681767510030993007}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: InteractionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

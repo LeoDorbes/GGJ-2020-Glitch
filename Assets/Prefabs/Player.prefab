@@ -509,9 +509,9 @@ MonoBehaviour:
   _interactionRange: 3
   _interactionLayerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 2048
   _animator: {fileID: 1072674426}
-  ActionHint: {fileID: 0}
+  ActionHint: {fileID: 528065371391905854}
   HasControl: 1
 --- !u!114 &8537872633039532045
 MonoBehaviour:
