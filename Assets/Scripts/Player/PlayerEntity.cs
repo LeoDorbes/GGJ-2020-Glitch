@@ -4,6 +4,7 @@ using DG.Tweening;
 using Interactibles;
 using Tiles;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Utils;
 
 namespace Player
@@ -17,7 +18,7 @@ namespace Player
         private PlayerMovementHandler _movementHandler;
         private TileSwitcherHandler _tileSwitcherHandler;
 
-        public GameObject ActionHint;
+        public SpriteRenderer ActionHint;
 
         public bool HasControl = true;
 
@@ -41,7 +42,7 @@ namespace Player
             {
                 targetColor = new Color(1, 1, 1, 0.8f);
             }
-            ActionHint.GetComponent<SpriteRenderer>().DOColor(targetColor, .5f);
+            ActionHint.color = targetColor;
         }
 
         private void Update()
@@ -77,7 +78,12 @@ namespace Player
             interactibleEntity.ChangeGlitchState();
             if (!interactibleEntity.AlreadyInteracted)
             {
-                TileManager.I.addBugs(0.02f);
+                var bugRatio = 0.02f;
+                if (SceneManager.GetActiveScene().name == "4")
+                {
+                    bugRatio = 1f;
+                }
+                TileManager.I.addBugs(bugRatio);
                 GameManager.I.SetBugLevel();
                 interactibleEntity.AlreadyInteracted = true;
             }

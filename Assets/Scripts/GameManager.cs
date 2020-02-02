@@ -53,16 +53,16 @@ public class GameManager : Singleton<GameManager>
         var scene = int.Parse(SceneManager.GetActiveScene().name);
 
         
-        if (scene < 2)
+        if (scene < 4)
         {
             StartCoroutine(Animations.FadeInCoroutine(1f, GameUi.BlackForeground));
-            yield return new WaitForSeconds(1.1f);
+            yield return new WaitForSeconds(2f);
             SceneManager.LoadScene((scene + 1).ToString());
         }
         else
         {
             _ambianceManager.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            StartCoroutine(Animations.FadeInCoroutine(1.6f, GameUi.BlackForeground));
+            StartCoroutine(Animations.FadeInCoroutine(1f, GameUi.BlackForeground));
             _musicManager.setParameterByName("fin", 1);
             yield return new WaitForSeconds(1.8f);
             TileManager.I.BugRatio = 0;

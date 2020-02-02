@@ -511,7 +511,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   _animator: {fileID: 1072674426}
-  ActionHint: {fileID: 528065371391905854}
+  ActionHint: {fileID: 4137852925691286115}
   HasControl: 1
 --- !u!114 &8537872633039532045
 MonoBehaviour:
