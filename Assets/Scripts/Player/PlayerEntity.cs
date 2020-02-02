@@ -12,7 +12,7 @@ namespace Player
     {
         [SerializeField] private float _interactionRange;
         [SerializeField] private LayerMask _interactionLayerMask;
-        [SerializeField] private AnimatorController _animator;
+        [SerializeField] private Animator _animator;
 
         private PlayerMovementHandler _movementHandler;
         private TileSwitcherHandler _tileSwitcherHandler;

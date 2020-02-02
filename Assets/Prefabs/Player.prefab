@@ -382,7 +382,7 @@ MonoBehaviour:
   _interactionLayerMask:
     serializedVersion: 2
     m_Bits: 1024
-  _animator: {fileID: 0}
+  _animator: {fileID: 1072674426}
   HasControl: 1
 --- !u!114 &8537872633039532045
 MonoBehaviour:

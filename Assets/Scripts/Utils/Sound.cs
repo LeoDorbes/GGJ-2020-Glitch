@@ -9,7 +9,7 @@ namespace Utils
         {
             if (location == null)
             {
-                FMODUnity.RuntimeManager.PlayOneShot(soundPath, location.position);
+                FMODUnity.RuntimeManager.PlayOneShot(soundPath);
                 return;
             }
             FMODUnity.RuntimeManager.PlayOneShot(soundPath, location.position);
@@ -23,7 +23,7 @@ namespace Utils
         /// <param name="soundName"></param>
         /// <param name="location"></param>
         /// <returns></returns>
-        public static EventInstance CreateSoundInstance(string soundPath, Transform location = null)
+        public static EventInstance CreateSoundInstance(string soundPath)
         {
             return FMODUnity.RuntimeManager.CreateInstance(soundPath);
         }
