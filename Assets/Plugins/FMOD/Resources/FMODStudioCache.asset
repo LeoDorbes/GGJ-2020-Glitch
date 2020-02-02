@@ -20,8 +20,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -716407934747744260}
-  - {fileID: 1836965080827154621}
+  - {fileID: 31015931679146294}
+  - {fileID: 3951285580419983344}
   MinDistance: 0
   MaxDistance: 0
   Length: 129333
@@ -320,8 +320,25 @@ MonoBehaviour:
   - {fileID: 9042479080774224033}
   StringsBanks:
   - {fileID: 299698609349186449}
-  stringsBankWriteTime: 637162476170428705
+  stringsBankWriteTime: 637162478778573697
   cacheVersion: 3
+--- !u!114 &31015931679146294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Generative/fin
+  m_EditorClassIdentifier: 
+  Name: fin
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &76164415202086731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:/Users/Shadow/Documents/Projects/glitch/FMOD Assets/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637162476170428705
+  lastModified: 637162478778573697
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -442,6 +459,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 40000
+--- !u!114 &3951285580419983344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Generative/bugLevel
+  m_EditorClassIdentifier: 
+  Name: bugLevel
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
 --- !u!114 &4703403915740884301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:/Users/Shadow/Documents/Projects/glitch/FMOD Assets/Desktop/Master.bank
   SubDir: 
-  lastModified: 637162476092828681
+  lastModified: 637162478782363698
   LoadResult: 0
   FileSizes:
   - Name: 
