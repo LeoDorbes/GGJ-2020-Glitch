@@ -1,5 +1,88 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8280414994722689996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/SOUND_GET_UNGLITCHED
+  m_EditorClassIdentifier: 
+  Path: event:/SD/SOUND_GET_UNGLITCHED
+  guid: 59b6dc98de8727438c77916671d4cffc
+  Banks:
+  - {fileID: -688467603702523764}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4500
+--- !u!114 &-7624138465343139936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Generative/bugLevel
+  m_EditorClassIdentifier: 
+  Name: bugLevel
+  Min: 0
+  Max: 100
+  Default: 0
+  Exists: 1
+--- !u!114 &-7330905206212178265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/Global Game Jam/glitch/FMOD Assets/Desktop/Master.strings.bank
+  SubDir: Desktop
+  lastModified: 637162416683088088
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1268
+  Exists: 1
+--- !u!114 &-7250092259863653667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/Amb/Amb
+  m_EditorClassIdentifier: 
+  Path: event:/SD/Amb/Amb
+  guid: 735cb07c21645b48930b0ff5597b2a11
+  Banks:
+  - {fileID: -688467603702523764}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 30000
 --- !u!114 &-5431543711802664411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +166,54 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 500
+--- !u!114 &-2737480539652885600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music_Generative
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music_Generative
+  guid: 04958671d7be6847922550a093ebf93a
+  Banks:
+  - {fileID: -688467603702523764}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -638577218067809461}
+  - {fileID: -7624138465343139936}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 129333
+--- !u!114 &-1174660375273711942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/Footsteps/Footsteps_character
+  m_EditorClassIdentifier: 
+  Path: event:/SD/Footsteps/Footsteps_character
+  guid: 24e330073e325a48817fed4e79eb4857
+  Banks:
+  - {fileID: -688467603702523764}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 20
+  Length: 1750
 --- !u!114 &-858693780033399440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +237,43 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4500
+--- !u!114 &-688467603702523764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/Global Game Jam/glitch/FMOD Assets/Desktop/Master.bank
+  SubDir: Desktop
+  lastModified: 637162416683058155
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 19125024
+  Exists: 1
+--- !u!114 &-638577218067809461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music_Generative/fin
+  m_EditorClassIdentifier: 
+  Name: fin
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-527539499457942342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,21 +310,21 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 8905733989674912308}
-  - {fileID: -5431543711802664411}
+  - {fileID: -7330905206212178265}
+  - {fileID: -688467603702523764}
   EditorEvents:
-  - {fileID: 7672922374879579322}
-  - {fileID: 749015449711738466}
-  - {fileID: -858693780033399440}
-  - {fileID: -527539499457942342}
-  - {fileID: -4176689271933328193}
-  - {fileID: -3217040637877151972}
+  - {fileID: -2737480539652885600}
+  - {fileID: -1174660375273711942}
+  - {fileID: -8280414994722689996}
+  - {fileID: -7250092259863653667}
+  - {fileID: 5294752577384027775}
+  - {fileID: 7723436199343802339}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5431543711802664411}
+  - {fileID: -688467603702523764}
   StringsBanks:
-  - {fileID: 8905733989674912308}
-  stringsBankWriteTime: 637162407657034739
+  - {fileID: -7330905206212178265}
+  stringsBankWriteTime: 637162416683088088
   cacheVersion: 3
 --- !u!114 &749015449711738466
 MonoBehaviour:
@@ -198,6 +366,29 @@ MonoBehaviour:
   Max: 100
   Default: 0
   Exists: 1
+--- !u!114 &5294752577384027775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/SOUND_GLITCH_IN
+  m_EditorClassIdentifier: 
+  Path: event:/SD/SOUND_GLITCH_IN
+  guid: c61717009d8f8d4ebf4e2a1a79adffb5
+  Banks:
+  - {fileID: -688467603702523764}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 16000
 --- !u!114 &7672922374879579322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +414,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 129333
+--- !u!114 &7723436199343802339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SD/SOUND_LASER
+  m_EditorClassIdentifier: 
+  Path: event:/SD/SOUND_LASER
+  guid: cc8e701556970e49a9cda58a62cc5785
+  Banks:
+  - {fileID: -688467603702523764}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
 --- !u!114 &8905733989674912308
 MonoBehaviour:
   m_ObjectHideFlags: 0
