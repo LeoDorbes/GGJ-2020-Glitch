@@ -24,6 +24,7 @@ namespace Player
 
         private void Awake()
         {
+            _animator = GetComponent<Animator>();
             PlayerManager.I.Player = this;
             _movementHandler = GetComponent<PlayerMovementHandler>();
             _movementHandler.Player = this;
@@ -51,23 +52,23 @@ namespace Player
                 var interactibleEntity = GetInteractibleToInteractWith();
 
                 if (!interactibleEntity) return;
-                interactibleEntity.ChangeGlitchState();
                 _animator.SetTrigger("doAction");
-                StartCoroutine(GiveControl(true, 1f));
-                HasControl = false;
-                if (!interactibleEntity.AlreadyInteracted)
-                {
-                    TileManager.I.addBugs(0.01f);
-                    interactibleEntity.AlreadyInteracted = true;
-                }
-                
+                StartCoroutine(GlitchEntity(interactibleEntity));
             }
         }
 
-        private IEnumerator GiveControl(bool giveControl, float delay)
+        private IEnumerator GlitchEntity(InteractibleEntity interactibleEntity)
         {
-            yield return new WaitForSeconds(delay);
-            HasControl = giveControl;
+            HasControl = false;
+            yield return new WaitForSeconds(1f);
+            interactibleEntity.ChangeGlitchState();
+            if (!interactibleEntity.AlreadyInteracted)
+            {
+                TileManager.I.addBugs(0.01f);
+                interactibleEntity.AlreadyInteracted = true;
+            }
+            yield return new WaitForSeconds(.5f);
+            HasControl = true;
         }
 
         private void SetDirectionType(Vector2 direction)
