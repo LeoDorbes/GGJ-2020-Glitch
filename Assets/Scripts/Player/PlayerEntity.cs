@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using Interactibles;
 using Tiles;
@@ -12,7 +13,7 @@ namespace Player
     {
         [SerializeField] private float _interactionRange;
         [SerializeField] private LayerMask _interactionLayerMask;
-        [SerializeField] private AnimatorController _animator;
+        [SerializeField] private Animator _animator;
 
         private PlayerMovementHandler _movementHandler;
         private TileSwitcherHandler _tileSwitcherHandler;
@@ -23,6 +24,7 @@ namespace Player
 
         private void Awake()
         {
+            _animator = GetComponent<Animator>();
             PlayerManager.I.Player = this;
             _movementHandler = GetComponent<PlayerMovementHandler>();
             _movementHandler.Player = this;
@@ -50,13 +52,24 @@ namespace Player
                 var interactibleEntity = GetInteractibleToInteractWith();
 
                 if (!interactibleEntity) return;
-                interactibleEntity.ChangeGlitchState();
-                if (!interactibleEntity.AlreadyInteracted)
-                {
-                    TileManager.I.addBugs(0.01f);
-                    interactibleEntity.AlreadyInteracted = true;
-                }
+                _animator.SetTrigger("doAction");
+                StartCoroutine(GlitchEntity(interactibleEntity));
             }
+        }
+
+        private IEnumerator GlitchEntity(InteractibleEntity interactibleEntity)
+        {
+            HasControl = false;
+            yield return new WaitForSeconds(1f);
+            interactibleEntity.ChangeGlitchState();
+            if (!interactibleEntity.AlreadyInteracted)
+            {
+                TileManager.I.addBugs(0.05f);
+                GameManager.I.SetBugLevel();
+                interactibleEntity.AlreadyInteracted = true;
+            }
+            yield return new WaitForSeconds(.5f);
+            HasControl = true;
         }
 
         private void SetDirectionType(Vector2 direction)

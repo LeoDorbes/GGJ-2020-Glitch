@@ -1,3 +1,6 @@
+using System.Collections;
+using DG.Tweening;
+using UnityEditor;
 using UnityEngine;
 using Utils;
 
@@ -7,6 +10,8 @@ namespace Tiles
     {
         public Point2 Position { get; private set; }
         public bool Glitched { get; private set; }
+        
+        public static bool CanMakeSound = true;
 
         public bool glitchProcessIsOccuring = false;
 
@@ -40,14 +45,22 @@ namespace Tiles
         {
             if (Glitched != glitched && glitched)
             {
-                if (Random.Range(1, 100) > 10)
+                if (CanMakeSound)
                 {
                     Sound.PlaySoundOneShot("event:/SD/Footsteps/Footsteps_character", transform);
+                    CanMakeSound = false;
+                    StartCoroutine(MakeSoundAvailable());
                 }
             }
             
             Glitched = glitched;
             _graphicsHandler.DisplayGlitchedState(glitched);
+        }
+
+        private IEnumerator MakeSoundAvailable()
+        {
+            yield return new WaitForSeconds(0.1f);
+            CanMakeSound = true;
         }
 
         public void SwitchCollided()
