@@ -1,8 +1,10 @@
 ﻿using System;
 using DG.Tweening;
+using FMOD.Studio;
 using Player;
 using UnityEditor.Animations;
 using UnityEngine;
+using Utils;
 
 namespace Interactibles
 {
@@ -11,10 +13,18 @@ namespace Interactibles
         [SerializeField] private Transform _player;
         [SerializeField] private Animator _animator;
         private bool _endAnim;
+        private EventInstance _glitchSound;
 
+        private void Start()
+        {
+            _glitchSound = Sound.CreateSoundInstance("event:/SD/SOUND_GLITCH_IN");
+            _glitchSound.setVolume(0);
+        }
         private void Update()
         {
-            if (_player.position.x - transform.position.x <= 3f && Input.GetButtonDown("Jump"))
+            var diff = _player.position.x - transform.position.x;
+            _glitchSound.setVolume(180 / (diff + 3));
+            if (diff <= 3f && Input.GetButtonDown("Jump"))
             {
                 _endAnim = true;
                 _player.GetComponent<PlayerEntity>().HasControl = false;
