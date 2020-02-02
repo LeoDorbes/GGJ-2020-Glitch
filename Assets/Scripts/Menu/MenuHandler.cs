@@ -33,8 +33,9 @@ namespace Menu
                 if (i == images.Count)
                 {
                     frameDuration = 3;
-
-                    blackImage.DOColor(new Color(0, 0, 0, 0), 3f);
+                    buttonImage.sprite = image.sprite;
+                    yield return new WaitForSeconds(1.5f);
+                    blackImage.DOColor(new Color(0, 0, 0, 1), 3f);
                 }
                 buttonImage.sprite = image.sprite;
                 yield return new WaitForSeconds(frameDuration);
