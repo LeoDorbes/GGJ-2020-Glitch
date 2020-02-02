@@ -7,6 +7,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 545366767393662552, guid: f419932eafe63ef409bfe4d8082013b7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e275b649bef980544860a3c1e5b1dea5,
+        type: 3}
     - target: {fileID: 6234837842816424549, guid: f419932eafe63ef409bfe4d8082013b7,
         type: 3}
       propertyPath: _neonSprite
