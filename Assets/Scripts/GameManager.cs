@@ -2,6 +2,7 @@
 using System.Collections;
 using FMOD.Studio;
 using Player;
+using Tiles;
 using Ui;
 using UnityEditor;
 using UnityEngine;
@@ -31,6 +32,11 @@ public class GameManager : Singleton<GameManager>
         _musicManager.start();
     }
 
+    public void SetBugLevel()
+    {
+        _musicManager.setParameterByName("bugLevel", TileManager.I.BugRatio);
+    }
+
     public void LoadNextLevel()
     {
         StartCoroutine(LoadNextLevelCoroutine());
@@ -42,7 +48,7 @@ public class GameManager : Singleton<GameManager>
         var scene = int.Parse(SceneManager.GetActiveScene().name);
 
         
-        if (scene != 99)
+        if (scene != 2)
         {
             StartCoroutine(Animations.FadeInCoroutine(1f, GameUi.BlackForeground));
             yield return new WaitForSeconds(1.1f);
