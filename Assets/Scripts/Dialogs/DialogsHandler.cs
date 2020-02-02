@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using FMOD.Studio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Utils;
 
 namespace Dialogs
 {
@@ -27,6 +29,7 @@ namespace Dialogs
         private int _currentDialogIndex;
         private bool _isFading;
 
+
         private void Awake()
         {
             _dialogBoxBackground = _dialogBox.GetComponentInChildren<Image>();
@@ -34,6 +37,7 @@ namespace Dialogs
             
             _dialogBoxBackground.sprite = _dialogs[_currentDialogIndex].Background;
             _dialogBoxText.text = _dialogs[_currentDialogIndex++].Text;
+
         }
 
         private void Update()
