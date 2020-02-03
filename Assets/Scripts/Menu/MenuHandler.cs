@@ -18,10 +18,25 @@ namespace Menu
         [SerializeField] public List<Image> images;
 
         public static float frameDuration = 0.25f;
+
+        private bool _gameStarted = false;
         
         public void StartGame()
         {
-            StartCoroutine(launchGameCoroutine());
+            if (!_gameStarted)
+            {
+                StartCoroutine(launchGameCoroutine());
+                _gameStarted = true;
+            }
+        }
+
+        private void Update()
+        {
+            if (Input.GetButtonDown("Jump") && !_gameStarted)
+            {
+                _gameStarted = true;
+                StartCoroutine(launchGameCoroutine());
+            }
         }
 
         public IEnumerator launchGameCoroutine()

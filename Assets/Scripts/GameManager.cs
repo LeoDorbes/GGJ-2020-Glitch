@@ -18,6 +18,7 @@ public class GameManager : Singleton<GameManager>
     public GameUi GameUi { get; set; }
     private void Start()
     {
+
         if (I != this)
         {
             Destroy(gameObject);
@@ -58,6 +59,7 @@ public class GameManager : Singleton<GameManager>
             StartCoroutine(Animations.FadeInCoroutine(1f, GameUi.BlackForeground));
             yield return new WaitForSeconds(2f);
             SceneManager.LoadScene((scene + 1).ToString());
+            SetBugLevel();
         }
         else
         {
