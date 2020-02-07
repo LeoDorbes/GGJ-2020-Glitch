@@ -109,32 +109,11 @@ namespace Player
 
         private InteractibleEntity GetInteractibleToInteractWith()
         {
-            var originX = 0f;
-            var originY = 0f;
 
-            switch (_direction)
-            {
-                case PlayerDirectionType.Down:
-                    originY = -0.5f;
-                    break;
-                case PlayerDirectionType.Left:
-                    originX = -0.5f;
-                    break;
-                case PlayerDirectionType.Up:
-                    originY = 0.5f;
-                    break;
-                case PlayerDirectionType.Right:
-                    originX = 0.5f;
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
-            var originFromPlayer = new Vector2(originX, originY);
-            var hit = Physics2D.Raycast(
-                new Vector2(transform.position.x, transform.position.y + 0.5f) + originFromPlayer,
-                originFromPlayer.normalized,
+            var hit = Physics2D.CircleCast(
+                new Vector2(transform.position.x, transform.position.y + 0.5f),
                 _interactionRange,
+                Vector2.up,
                 _interactionLayerMask
             );
 

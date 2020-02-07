@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: _glitchable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2364350669363002268, guid: 0ce28e7ea04b95f44aef3ca1d1f66c0d,
+        type: 3}
+      propertyPath: _isBoxCollider2D
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2436784415849777920, guid: 0ce28e7ea04b95f44aef3ca1d1f66c0d,
         type: 3}
       propertyPath: m_Name

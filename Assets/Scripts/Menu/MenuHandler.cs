@@ -19,7 +19,7 @@ namespace Menu
 
         public static float frameDuration = 0.25f;
 
-        private bool _gameStarted = false;
+        private bool _gameStarted;
         
         public void StartGame()
         {
