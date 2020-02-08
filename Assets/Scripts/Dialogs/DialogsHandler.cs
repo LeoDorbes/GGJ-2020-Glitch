@@ -42,7 +42,7 @@ namespace Dialogs
 
         private void Update()
         {
-            if (Input.GetButton("Jump") && !_isFading)
+            if (Input.anyKeyDown && !_isFading)
             {
                 if (_currentDialogIndex < _dialogs.Count)
                 {
@@ -50,7 +50,8 @@ namespace Dialogs
                 }
                 else
                 {
-                    SceneManager.LoadScene(_nextSceneName);
+                    _dialogBoxBackground.DOFade(0, 0.5f);
+                    SceneManager.LoadSceneAsync(_nextSceneName);
                 }
             }
         }

@@ -23,16 +23,12 @@ namespace Menu
         
         public void StartGame()
         {
-            if (!_gameStarted)
-            {
-                StartCoroutine(launchGameCoroutine());
-                _gameStarted = true;
-            }
+           
         }
 
         private void Update()
         {
-            if (Input.GetButtonDown("Jump") && !_gameStarted)
+            if (Input.anyKeyDown && !_gameStarted)
             {
                 _gameStarted = true;
                 StartCoroutine(launchGameCoroutine());
@@ -42,10 +38,9 @@ namespace Menu
         public IEnumerator launchGameCoroutine()
         {
             Sound.PlaySoundOneShot("event:/SD/SOUND_GET_GLITCHED");
-            int i = 0;
-            foreach (var image in images)
+            for(int i = 0; i < images.Count; i++)
             {
-                i++;
+                var image = images[i];
                 if (i == images.Count)
                 {
                     frameDuration = 3;
@@ -56,8 +51,9 @@ namespace Menu
                 buttonImage.sprite = image.sprite;
                 yield return new WaitForSeconds(frameDuration);
             }
-            
-            SceneManager.LoadScene("IntroDialogue");
+            yield return new WaitForSeconds(1f);
+
+            SceneManager.LoadSceneAsync("IntroDialogue");
         }
 
         public void QuitGame()

@@ -109,15 +109,14 @@ namespace Player
 
         private InteractibleEntity GetInteractibleToInteractWith()
         {
-
-            var hit = Physics2D.CircleCast(
-                new Vector2(transform.position.x, transform.position.y + 0.5f),
+            var position = transform.position;
+            var hit = Physics2D.OverlapCircle(
+                new Vector2(position.x, position.y + 0.5f),
                 _interactionRange,
-                Vector2.up,
                 _interactionLayerMask
             );
-
-            return hit ? hit.collider.GetComponentInParent<InteractibleEntity>() : null;
+            
+            return hit ? hit.GetComponentInParent<InteractibleEntity>() : null;
         }
     }
 }

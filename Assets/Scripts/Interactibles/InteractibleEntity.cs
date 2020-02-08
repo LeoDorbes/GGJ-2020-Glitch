@@ -54,19 +54,16 @@ namespace Interactibles
             
             Sound.PlaySoundOneShot(soundPath, transform);
 
-            if (!_isBoxCollider2D)
+            if (!Glitched || !_isBoxCollider2D)
             {
                 _playerCollider.enabled = !_playerCollider.enabled;
             }
             else
             {
-                var targetSize = Vector2.zero;
-                if (Glitched)
-                {
-                    targetSize = _colliderInvertSize;
-                }
-                ((BoxCollider2D)_playerCollider).size = _colliderInvertSize;
-                DOTween.To(()=> ((BoxCollider2D)_playerCollider).size, x=> ((BoxCollider2D)_playerCollider).size = x, targetSize, .5f);
+                var playerCollider = (BoxCollider2D)_playerCollider;
+                playerCollider.size = new Vector2(0, _colliderInvertSize.y);
+                _playerCollider.enabled = true;
+                DOTween.To(()=> playerCollider.size, x=> playerCollider.size = x, _colliderInvertSize, .5f);
             }
             
             _graphicsHandler.GlitchStateUpdated();
