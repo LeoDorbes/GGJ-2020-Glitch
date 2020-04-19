@@ -29,6 +29,8 @@ namespace Dialogs
         private int _currentDialogIndex;
         private bool _isFading;
 
+        private bool _sceneAlreadyLoading;
+
 
         private void Awake()
         {
@@ -50,8 +52,12 @@ namespace Dialogs
                 }
                 else
                 {
+                    if (_sceneAlreadyLoading)
+                        return;
+                    
                     _dialogBoxBackground.DOFade(0, 0.5f);
                     SceneManager.LoadSceneAsync(_nextSceneName);
+                    _sceneAlreadyLoading = true;
                 }
             }
         }
